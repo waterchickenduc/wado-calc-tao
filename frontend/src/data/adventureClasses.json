@@ -1,0 +1,588 @@
+{
+  "Adventurer": {
+    "description": "Born as an Adventurer, at level 5 the user chooses one of four branches. At later milestones the user selects subclasses whose passives modify base stats. At level 100 the chosen passives stack and upon rebirth the accumulated effects persist.",
+    "paths": [
+      {
+        "branch": "Warrior",
+        "path": [
+          {
+            "class": "Knight",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 5,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Berserker",
+            "stats": {
+              "health": 0,
+              "p_atk": 10,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Barbarian",
+            "stats": {
+              "health": 0,
+              "p_atk": 15,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Paladin",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "inventoryslots": 7
+            }
+          },
+          {
+            "class": "Guardian",
+            "stats": {
+              "health": 0,
+              "p_atk": 5,
+              "p_def": 0,
+              "m_atk": 5,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Michael",
+            "stats": {
+              "health": 0,
+              "p_atk": 9,
+              "p_def": 0,
+              "m_atk": 9,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          }
+        ]
+      },
+      {
+        "branch": "Thief",
+        "path": [
+          {
+            "class": "Assassin",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 5,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Death",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 15,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Lucifer",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 10,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Venom",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 10,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Shadower",
+            "stats": {
+              "health": 0,
+              "p_atk": 5,
+              "p_def": 0,
+              "m_atk": 5,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Diablo",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 20,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          }
+        ]
+      },
+      {
+        "branch": "Wizard",
+        "path": [
+          {
+            "class": "Pyrene",
+            "stats": {
+              "health": 0,
+              "p_atk": 3,
+              "p_def": 0,
+              "m_atk": 3,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Bishop",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 5,
+              "atk_delay": 5,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Litch",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 15,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Frieze",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 5,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Witch",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 10,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          },
+          {
+            "class": "Gnome",
+            "stats": {
+              "health": 0,
+              "p_atk": 9,
+              "p_def": 0,
+              "m_atk": 9,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0
+            }
+          }
+        ]
+      },
+      {
+        "branch": "Tamer",
+        "path": [
+          {
+            "class": "Hermit",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "inventoryslots": 7
+            }
+          },
+          {
+            "class": "Phantom",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "higher_chance_to_tame_3_skills_mercs": 0,
+              "catchrate": 50
+            }
+          },
+          {
+            "class": "Erebus",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "mercslot": 1
+            }
+          },
+          {
+            "class": "Monarch",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "mercslot": 1
+            }
+          },
+          {
+            "class": "Elementalist",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "higher_chance_to_tame_3_skills_mercs": 0,
+              "catchrate": 50
+            }
+          },
+          {
+            "class": "Uranus",
+            "stats": {
+              "health": 0,
+              "p_atk": 0,
+              "p_def": 0,
+              "m_atk": 0,
+              "m_def": 0,
+              "ele_atk": 0,
+              "ele_def": 0,
+              "spirit_atk": 0,
+              "increase_str": 0,
+              "increase_agi": 0,
+              "increase_int": 0,
+              "cr_rate": 0,
+              "cr_dmg": 0,
+              "skill_cd": 0,
+              "atk_delay": 0,
+              "hp_recovery_per_kill": 0,
+              "hp_recovery": 0,
+              "movementspeed": 0,
+              "mercslot": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

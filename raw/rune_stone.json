@@ -1,0 +1,56 @@
+[
+    {
+        "Stat": "Health"
+    },
+    {
+        "Stat": "P. Atk"
+    },
+    {
+        "Stat": "P. Def"
+    },
+    {
+        "Stat": "M. Atk"
+    },
+    {
+        "Stat": "M. Def"
+    },
+    {
+        "Stat": "Ele. Atk"
+    },
+    {
+        "Stat": "Ele. Def"
+    },
+    {
+        "Stat": "Spirit Atk"
+    },
+    {
+        "Stat": "Increase STR"
+    },
+    {
+        "Stat": "Increase AGI"
+    },
+    {
+        "Stat": "Increase INT"
+    },
+    {
+        "Stat": "Cr. Rate"
+    },
+    {
+        "Stat": "Cr. Dmg"
+    },
+    {
+        "Stat": "Skill CD"
+    },
+    {
+        "Stat": "Atk Delay"
+    },
+    {
+        "Stat": "HP Recovery per Kill"
+    },
+    {
+        "Stat": "HP Recovery"
+    },
+    {
+        "Stat": "Movementspeed"
+    }
+]

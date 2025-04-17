@@ -1,0 +1,28 @@
+# Force LF line endings for source files
+* text=auto eol=lf
+
+# Treat JSON and config files as text
+*.json text
+*.yml text
+*.yaml text
+*.toml text
+*.md text
+
+# Mark images as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+
+# Handle React/JS/TS files
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+
+# Prevent Git from messing up font files
+*.ttf binary
+*.woff binary
+*.woff2 binary

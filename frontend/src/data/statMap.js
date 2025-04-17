@@ -1,0 +1,22 @@
+export default {
+  "Health": "hp",
+  "P. Atk": "p_atk",
+  "P. Def": "p_def",
+  "M. Atk": "m_atk",
+  "M. Def": "m_def",
+  "Ele. Atk": "ele_atk",
+  "Ele. Def": "ele_def",
+  "Spirit Atk": "spirit_a_t_k",
+  "Increase STR": "increase_s_t_r",
+  "Increase AGI": "increase_a_g_i",
+  "Increase INT": "increase_i_n_t",
+  "Cr. Rate": "cr_rate",
+  "Cr. Dmg": "cr_dmg",
+  "Skill CD": "skill_c_d",
+  "Atk Delay": "atk_delay",
+  "HP Recovery per Kill": "h_p_recovery_per_kill",
+  "HP Recovery per attack": "h_p_recovery_per_attack",
+  "HP Recovery": "h_p_recovery",
+  "Double Critical": "double_critical",
+  "Aura Chance": "aura_chance"
+};

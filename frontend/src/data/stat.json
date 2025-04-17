@@ -1,0 +1,74 @@
+[
+  {
+    "Stat": "Health",
+    "key": "health"
+  },
+  {
+    "Stat": "P. Atk",
+    "key": "p_atk"
+  },
+  {
+    "Stat": "P. Def",
+    "key": "p_def"
+  },
+  {
+    "Stat": "M. Atk",
+    "key": "m_atk"
+  },
+  {
+    "Stat": "M. Def",
+    "key": "m_def"
+  },
+  {
+    "Stat": "Ele. Atk",
+    "key": "ele_atk"
+  },
+  {
+    "Stat": "Ele. Def",
+    "key": "ele_def"
+  },
+  {
+    "Stat": "Spirit Atk",
+    "key": "spirit_atk"
+  },
+  {
+    "Stat": "Increase STR",
+    "key": "increase_str"
+  },
+  {
+    "Stat": "Increase AGI",
+    "key": "increase_agi"
+  },
+  {
+    "Stat": "Increase INT",
+    "key": "increase_int"
+  },
+  {
+    "Stat": "Cr. Rate",
+    "key": "cr_rate"
+  },
+  {
+    "Stat": "Cr. Dmg",
+    "key": "cr_dmg"
+  },
+  {
+    "Stat": "Skill CD",
+    "key": "skill_cd"
+  },
+  {
+    "Stat": "Atk Delay",
+    "key": "atk_delay"
+  },
+  {
+    "Stat": "HP Recovery per Kill",
+    "key": "hp_recovery_per_kill"
+  },
+  {
+    "Stat": "HP Recovery",
+    "key": "hp_recovery"
+  },
+  {
+    "Stat": "Movementspeed",
+    "key": "movementspeed"
+  }
+]
