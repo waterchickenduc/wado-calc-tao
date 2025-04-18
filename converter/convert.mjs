@@ -34,11 +34,16 @@ function convertRunes() {
       }))
       .filter(({ Value }) => Value !== 0);
 
+    // Normalize aura field
+    const rawAura = entry["Aura"]?.trim().toLowerCase();
+    const aura =
+      !rawAura || rawAura === "none" || rawAura === "-" ? null : entry["Aura"].trim();
+
     return {
       name,
       runes,
       stats,
-      aura: entry["Aura"]?.trim() || null,
+      aura,
       auraChance: cleanNumber(entry["Aura Chance"]),
     };
   });
@@ -68,10 +73,10 @@ function convertClasses() {
 
           return {
             class: cls.class,
-            stats: normalizedStats
+            stats: normalizedStats,
           };
-        })
-      }))
+        }),
+      })),
     };
   }
 

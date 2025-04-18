@@ -1,0 +1,20 @@
+export default {
+  health: "Health",
+  p_atk: "P. Atk",
+  p_def: "P. Def",
+  m_atk: "M. Atk",
+  m_def: "M. Def",
+  ele_atk: "Ele. Atk",
+  ele_def: "Ele. Def",
+  spirit_atk: "Spirit Atk",
+  increase_str: "Increase STR",
+  increase_agi: "Increase AGI",
+  increase_int: "Increase INT",
+  cr_rate: "Cr. Rate",
+  cr_dmg: "Cr. Dmg",
+  skill_cd: "Skill CD",
+  atk_delay: "Atk Delay",
+  hp_recovery_per_kill: "HP Recovery per Kill",
+  hp_recovery: "HP Recovery",
+  movementspeed: "Movementspeed"
+};

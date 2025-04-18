@@ -33,7 +33,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -69,7 +69,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -139,7 +139,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -171,7 +171,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -256,7 +256,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -603,7 +603,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -648,7 +648,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -693,7 +693,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -746,7 +746,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -795,7 +795,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -859,7 +859,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -912,7 +912,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -948,7 +948,7 @@
         "Value": 10
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -985,7 +985,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1042,7 +1042,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1091,7 +1091,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1140,7 +1140,7 @@
         "Value": 0.45
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1221,7 +1221,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1287,7 +1287,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1323,7 +1323,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1360,7 +1360,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1403,7 +1403,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1491,7 +1491,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1619,7 +1619,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1660,7 +1660,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1692,7 +1692,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1733,7 +1733,7 @@
         "Value": 2.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1765,7 +1765,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1802,7 +1802,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1842,7 +1842,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1879,7 +1879,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1916,7 +1916,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1952,7 +1952,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -1988,7 +1988,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2032,7 +2032,7 @@
         "Value": 0.3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2085,7 +2085,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2130,7 +2130,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2162,7 +2162,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2195,7 +2195,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2222,7 +2222,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2271,7 +2271,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2328,7 +2328,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2363,7 +2363,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2403,7 +2403,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2438,7 +2438,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2489,7 +2489,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2533,7 +2533,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2598,7 +2598,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2672,7 +2672,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2764,7 +2764,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2853,7 +2853,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2931,7 +2931,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -2971,7 +2971,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3016,7 +3016,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3152,7 +3152,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3200,7 +3200,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3233,7 +3233,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3329,7 +3329,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3370,7 +3370,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3410,7 +3410,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3447,7 +3447,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3492,7 +3492,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3572,7 +3572,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3613,7 +3613,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3662,7 +3662,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3699,7 +3699,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3765,7 +3765,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3809,7 +3809,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3882,7 +3882,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -3955,7 +3955,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4000,7 +4000,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4090,7 +4090,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4134,7 +4134,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4178,7 +4178,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4278,7 +4278,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4334,7 +4334,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4379,7 +4379,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4411,7 +4411,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4463,7 +4463,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4508,7 +4508,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4544,7 +4544,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4585,7 +4585,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4637,7 +4637,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4701,7 +4701,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4734,7 +4734,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4779,7 +4779,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4839,7 +4839,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4875,7 +4875,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4924,7 +4924,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -4981,7 +4981,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5029,7 +5029,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5069,7 +5069,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5098,7 +5098,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5143,7 +5143,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5191,7 +5191,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5227,7 +5227,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5260,7 +5260,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5304,7 +5304,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5349,7 +5349,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5435,7 +5435,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5468,7 +5468,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5525,7 +5525,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5578,7 +5578,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5614,7 +5614,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5645,7 +5645,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5686,7 +5686,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5726,7 +5726,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5762,7 +5762,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5901,7 +5901,7 @@
         "Value": 7
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5933,7 +5933,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -5994,7 +5994,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6029,7 +6029,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6069,7 +6069,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6109,7 +6109,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6140,7 +6140,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6180,7 +6180,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6229,7 +6229,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6269,7 +6269,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6321,7 +6321,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6362,7 +6362,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6411,7 +6411,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6481,7 +6481,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6537,7 +6537,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6578,7 +6578,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6654,7 +6654,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6806,7 +6806,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6847,7 +6847,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6941,7 +6941,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -6981,7 +6981,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7034,7 +7034,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7074,7 +7074,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7134,7 +7134,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7171,7 +7171,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7211,7 +7211,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7277,7 +7277,7 @@
         "Value": 2.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7317,7 +7317,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7362,7 +7362,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7411,7 +7411,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7479,7 +7479,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7544,7 +7544,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7584,7 +7584,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7625,7 +7625,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7673,7 +7673,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7746,7 +7746,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7787,7 +7787,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7847,7 +7847,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7878,7 +7878,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7906,7 +7906,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -7975,7 +7975,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8046,7 +8046,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8086,7 +8086,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8126,7 +8126,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8163,7 +8163,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8245,7 +8245,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8290,7 +8290,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8326,7 +8326,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8358,7 +8358,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8391,7 +8391,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8436,7 +8436,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8548,7 +8548,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8585,7 +8585,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8622,7 +8622,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8765,7 +8765,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8810,7 +8810,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8875,7 +8875,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8912,7 +8912,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -8948,7 +8948,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9009,7 +9009,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9134,7 +9134,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9209,7 +9209,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9250,7 +9250,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9278,7 +9278,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9319,7 +9319,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9383,7 +9383,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9428,7 +9428,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9460,7 +9460,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9500,7 +9500,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9635,7 +9635,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9668,7 +9668,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9736,7 +9736,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9773,7 +9773,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9830,7 +9830,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9863,7 +9863,7 @@
         "Value": 10
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9939,7 +9939,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -9976,7 +9976,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10021,7 +10021,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10058,7 +10058,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10122,7 +10122,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10179,7 +10179,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10211,7 +10211,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10247,7 +10247,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10288,7 +10288,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10324,7 +10324,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10373,7 +10373,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10425,7 +10425,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10457,7 +10457,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10494,7 +10494,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10525,7 +10525,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10593,7 +10593,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10637,7 +10637,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10670,7 +10670,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10735,7 +10735,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10767,7 +10767,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10816,7 +10816,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10856,7 +10856,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10900,7 +10900,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -10969,7 +10969,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11014,7 +11014,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11086,7 +11086,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11127,7 +11127,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11163,7 +11163,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11204,7 +11204,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11257,7 +11257,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11293,7 +11293,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11341,7 +11341,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11397,7 +11397,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11438,7 +11438,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11486,7 +11486,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11513,7 +11513,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11546,7 +11546,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11574,7 +11574,7 @@
         "Value": 0.35
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11646,7 +11646,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11687,7 +11687,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11719,7 +11719,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11801,7 +11801,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11850,7 +11850,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11881,7 +11881,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11926,7 +11926,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -11975,7 +11975,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12011,7 +12011,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12123,7 +12123,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12156,7 +12156,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12197,7 +12197,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12233,7 +12233,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12286,7 +12286,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12364,7 +12364,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12405,7 +12405,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12458,7 +12458,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12495,7 +12495,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12536,7 +12536,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12576,7 +12576,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12637,7 +12637,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12668,7 +12668,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12721,7 +12721,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12785,7 +12785,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12826,7 +12826,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12862,7 +12862,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -12943,7 +12943,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13041,7 +13041,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13094,7 +13094,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13122,7 +13122,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13175,7 +13175,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13207,7 +13207,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13244,7 +13244,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13317,7 +13317,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13390,7 +13390,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13423,7 +13423,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13464,7 +13464,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13552,7 +13552,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13629,7 +13629,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13674,7 +13674,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13710,7 +13710,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13754,7 +13754,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13795,7 +13795,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13832,7 +13832,7 @@
         "Value": 6
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13880,7 +13880,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13912,7 +13912,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13945,7 +13945,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -13994,7 +13994,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14026,7 +14026,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14062,7 +14062,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14103,7 +14103,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14139,7 +14139,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14180,7 +14180,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14300,7 +14300,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14365,7 +14365,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14409,7 +14409,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14462,7 +14462,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14531,7 +14531,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14572,7 +14572,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14613,7 +14613,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14645,7 +14645,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14690,7 +14690,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14750,7 +14750,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14819,7 +14819,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14889,7 +14889,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14933,7 +14933,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -14982,7 +14982,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15122,7 +15122,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15159,7 +15159,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15200,7 +15200,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15239,7 +15239,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15280,7 +15280,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15324,7 +15324,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15377,7 +15377,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15414,7 +15414,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15455,7 +15455,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15488,7 +15488,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15517,7 +15517,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15565,7 +15565,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15610,7 +15610,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15737,7 +15737,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15782,7 +15782,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15830,7 +15830,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15875,7 +15875,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15902,7 +15902,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -15951,7 +15951,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16000,7 +16000,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16076,7 +16076,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16109,7 +16109,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16154,7 +16154,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16218,7 +16218,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16288,7 +16288,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16328,7 +16328,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16425,7 +16425,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16461,7 +16461,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16502,7 +16502,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16530,7 +16530,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16571,7 +16571,7 @@
         "Value": 2.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16612,7 +16612,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16647,7 +16647,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16691,7 +16691,7 @@
         "Value": 1.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16740,7 +16740,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16793,7 +16793,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16833,7 +16833,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16912,7 +16912,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -16947,7 +16947,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17013,7 +17013,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17054,7 +17054,7 @@
         "Value": 2.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17086,7 +17086,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17117,7 +17117,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17154,7 +17154,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17205,7 +17205,7 @@
         "Value": 0.2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17241,7 +17241,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17278,7 +17278,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17319,7 +17319,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17387,7 +17387,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17535,7 +17535,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17571,7 +17571,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17603,7 +17603,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17702,7 +17702,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17759,7 +17759,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17790,7 +17790,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17818,7 +17818,7 @@
         "Value": 0.25
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17870,7 +17870,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17907,7 +17907,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17944,7 +17944,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -17981,7 +17981,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18033,7 +18033,7 @@
         "Value": 0.5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18078,7 +18078,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18142,7 +18142,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18194,7 +18194,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18231,7 +18231,7 @@
         "Value": 5
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18393,7 +18393,7 @@
         "Value": 1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18442,7 +18442,7 @@
         "Value": 4
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18486,7 +18486,7 @@
         "Value": 2
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18531,7 +18531,7 @@
         "Value": 0.1
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   },
   {
@@ -18601,7 +18601,7 @@
         "Value": 3
       }
     ],
-    "aura": "none",
+    "aura": null,
     "auraChance": 0
   }
 ]

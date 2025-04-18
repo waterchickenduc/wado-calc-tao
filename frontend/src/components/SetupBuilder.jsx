@@ -1,16 +1,20 @@
 import React, { useState, useMemo } from "react";
 import runeData from "../data/runes.json";
 import statList from "../data/stat.json";
+import auraEffects from "../data/auraEffects.json";
+
+import statLabels from "../lib/statLabels";
 import ClassSelector from "./ClassSelector";
 import StatsSummary from "./StatsSummary";
+import RuneCard from "./RuneCard";
 
 export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }) {
   const [tab, setTab] = useState("runes");
   const [searchText, setSearchText] = useState("");
   const [filters, setFilters] = useState([]);
 
-  const selectedRunes = setup?.runes || [];
-  const selectedClasses = setup?.classes || [];
+  const selectedRunes = Array.isArray(setup?.runes) ? setup.runes : [];
+  const selectedClasses = Array.isArray(setup?.classes) ? setup.classes : [];
 
   const grouped = selectedRunes.reduce((acc, rune) => {
     acc[rune.name] = acc[rune.name] || { ...rune, count: 0 };
@@ -18,6 +22,17 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
     return acc;
   }, {});
   const uniqueSelectedRunes = Object.values(grouped);
+
+  const filteredRunes = runeData.filter((rune) => {
+    const runeMatch = rune.name?.toLowerCase().includes(searchText.toLowerCase());
+    const stoneMatch = rune.runes?.some((stone) =>
+      stone?.toLowerCase().includes(searchText.toLowerCase())
+    );
+    const filterMatch = filters.every((stat) =>
+      rune.stats?.some((s) => s.Stat.toLowerCase() === stat.toLowerCase())
+    );
+    return (runeMatch || stoneMatch) && filterMatch;
+  });
 
   const handleAddRune = (rune) => {
     if (selectedRunes.length >= 6) return;
@@ -35,14 +50,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   const handleClearRunes = () => updateSetup({ runes: [] });
 
-  const filteredRunes = runeData.filter((rune) => {
-    const nameMatch = rune.name.toLowerCase().includes(searchText.toLowerCase());
-    const statMatch = filters.every((stat) =>
-      rune.stats.some((s) => s.Stat.toLowerCase() === stat.toLowerCase())
-    );
-    return nameMatch && statMatch;
-  });
-
   const addFilter = (stat) => {
     if (!filters.includes(stat)) setFilters([...filters, stat]);
   };
@@ -54,11 +61,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const runeStats = useMemo(() => {
     const stats = {};
     selectedRunes.forEach((rune) => {
-      if (Array.isArray(rune.stats)) {
-        rune.stats.forEach(({ Stat, Value }) => {
-          stats[Stat] = (stats[Stat] || 0) + Value;
-        });
-      }
+      (rune.stats || []).forEach(({ Stat, Value }) => {
+        stats[Stat] = (stats[Stat] || 0) + (parseFloat(Value) || 0);
+      });
     });
     return stats;
   }, [selectedRunes]);
@@ -66,18 +71,50 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const classStats = useMemo(() => {
     const stats = {};
     selectedClasses.forEach((cls) => {
-      const list = Array.isArray(cls?.stats) ? cls.stats : [];
-      list.forEach(({ Stat, Value }) => {
-        stats[Stat] = (stats[Stat] || 0) + Value;
+      const entries = Object.entries(cls?.stats || {});
+      entries.forEach(([key, value]) => {
+        stats[key] = (stats[key] || 0) + (parseFloat(value) || 0);
       });
     });
     return stats;
   }, [selectedClasses]);
 
+  const auraStats = useMemo(() => {
+    const stats = {};
+    const activeAuras = [];
+
+    selectedRunes.forEach((rune) => {
+      if (!rune.aura || rune.aura.toLowerCase() === "none") return;
+
+      const effect = auraEffects.find((a) => a.name === rune.aura);
+      if (!effect || !effect.stats) return;
+
+      const normalizedStats = {};
+
+      Object.entries(effect.stats).forEach(([rawKey, val]) => {
+        const label = statLabels[rawKey] || rawKey;
+        const num = parseFloat(val) || 0;
+        if (num !== 0) {
+          stats[label] = (stats[label] || 0) + num;
+          normalizedStats[label] = num;
+        }
+      });
+
+      activeAuras.push({
+        name: rune.aura,
+        chance: rune.auraChance || 0,
+        stats: normalizedStats,
+      });
+    });
+
+    return { stats, activeAuras };
+  }, [selectedRunes]);
+
   return (
     <div className="flex flex-col md:flex-row gap-6 text-white">
+      {/* LEFT SIDE */}
       <div className="flex-1 space-y-4">
-        {/* Setup Header */}
+        {/* Header */}
         <div className="flex justify-between items-center">
           <input
             className="bg-zinc-800 text-white px-3 py-2 rounded w-full max-w-sm"
@@ -95,14 +132,14 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         {/* Tabs */}
         <div className="flex gap-2">
           <button
-            className={`px-4 py-2 rounded ${tab === "runes" ? "bg-blue-600" : "bg-zinc-800"} text-white`}
             onClick={() => setTab("runes")}
+            className={`px-4 py-2 rounded ${tab === "runes" ? "bg-blue-600" : "bg-zinc-800"} text-white`}
           >
             Runes
           </button>
           <button
-            className={`px-4 py-2 rounded ${tab === "classes" ? "bg-blue-600" : "bg-zinc-800"} text-white`}
             onClick={() => setTab("classes")}
+            className={`px-4 py-2 rounded ${tab === "classes" ? "bg-blue-600" : "bg-zinc-800"} text-white`}
           >
             Classes
           </button>
@@ -123,60 +160,21 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
               )}
             </div>
 
-            {selectedRunes.length === 0 ? (
-              <p className="text-sm text-blue-200">No runes selected.</p>
-            ) : (
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-                {uniqueSelectedRunes.map((rune) => (
-                  <div
-                    key={rune.name}
-                    className="bg-zinc-900 rounded p-3 border border-zinc-700 flex flex-col gap-2"
-                  >
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2 font-semibold text-white">
-                        {rune.name}
-                        <span className="text-xs bg-zinc-700 px-2 py-0.5 rounded-full text-white/80">
-                          ×{rune.count}
-                        </span>
-                      </div>
-                      <button
-                        onClick={() => handleRemoveRune(rune.name)}
-                        className="text-gray-400 hover:text-red-500 text-lg"
-                      >
-                        ×
-                      </button>
-                    </div>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {uniqueSelectedRunes.map((rune) => (
+                <RuneCard
+                  key={rune.name}
+                  rune={rune}
+                  count={rune.count}
+                  onRemove={() => handleRemoveRune(rune.name)}
+                />
+              ))}
+            </div>
 
-                    <div className="flex flex-wrap gap-2 text-xs">
-                      {rune.runes.map((r, i) => (
-                        <span
-                          key={i}
-                          className="bg-zinc-800 px-2 py-1 rounded-full text-white/80 border border-zinc-600"
-                        >
-                          {r}
-                        </span>
-                      ))}
-                    </div>
-
-                    <ul className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-sm text-white/90">
-                      {rune.stats
-                        .filter(({ Value }) => Value !== 0)
-                        .map(({ Stat, Value }, i) => (
-                          <li key={i}>
-                            {Stat}: <span className="font-semibold">{Value}%</span>
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Filters */}
             <div className="mt-6 space-y-2">
               <input
                 type="text"
-                placeholder="🔍 Search rune name or stat"
+                placeholder="🔍 Search rune name or stone"
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
                 className="px-3 py-2 rounded bg-zinc-800 text-white w-full"
@@ -205,75 +203,42 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                   className="px-2 py-1 rounded bg-zinc-700 text-white"
                 >
                   <option value="">➕ Add stat filter</option>
-                  {statList
-                    .filter((s) => !filters.includes(s))
-                    .map((stat) => (
-                      <option key={stat} value={stat}>
-                        {stat}
-                      </option>
-                    ))}
+                  {statList.filter((s) => !filters.includes(s)).map((stat) => (
+                    <option key={stat} value={stat}>
+                      {stat}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
 
-            {/* Rune Library */}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
-              {filteredRunes.map((rune, index) => {
-                const isDisabled = selectedRunes.length >= 6;
-                return (
-                  <div
-                    key={`${rune.name}-${index}`}
-                    className="bg-zinc-900 rounded p-3 border border-zinc-700 flex flex-col gap-2"
-                  >
-                    {/* Header with name + add icon */}
-                    <div className="flex justify-between items-center">
-                      <div className="text-blue-400 font-semibold">{rune.name}</div>
-                      <button
-                        onClick={() => handleAddRune(rune)}
-                        disabled={isDisabled}
-                        className={`text-lg font-bold px-2 rounded-full ${
-                          isDisabled ? "text-zinc-700" : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        +
-                      </button>
-                    </div>
-                      
-                    {/* Rune letters */}
-                    <div className="flex flex-wrap gap-2 text-xs">
-                      {rune.runes.map((r, i) => (
-                        <span
-                          key={i}
-                          className="bg-zinc-800 px-2 py-1 rounded-full text-white/80 border border-zinc-600"
-                        >
-                          {r}
-                        </span>
-                      ))}
-                    </div>
-
-        {/* Stat grid */}
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2 text-sm text-white/90">
-          {rune.stats
-            .filter(({ Value }) => Value !== 0)
-            .map(({ Stat, Value }, i) => (
-              <li key={i}>
-                {Stat}: <span className="font-semibold">{Value}%</span>
-              </li>
-            ))}
-        </ul>
-      </div>
-    );
-  })}
-</div>
-
+              {filteredRunes.map((rune) => (
+                <RuneCard
+                  key={rune.name}
+                  rune={rune}
+                  onAdd={() => handleAddRune(rune)}
+                  isDisabled={selectedRunes.length >= 6}
+                />
+              ))}
+            </div>
           </>
         )}
 
-        {tab === "classes" && <ClassSelector setup={setup} updateSetup={updateSetup} />}
+        {/* Classes Tab */}
+        {tab === "classes" && (
+          <ClassSelector setup={setup} updateSetup={updateSetup} />
+        )}
       </div>
 
+      {/* Right Side: Stats Summary */}
       <div className="w-full md:w-[300px] space-y-4">
-        <StatsSummary runeStats={runeStats} classStats={classStats} />
+        <StatsSummary
+          runeStats={runeStats}
+          classStats={classStats}
+          auraStats={auraStats.stats}
+          activeAuras={auraStats.activeAuras}
+        />
       </div>
     </div>
   );

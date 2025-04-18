@@ -1,12 +1,15 @@
-const statOrder = [
+export default [
+  "Health",
   "HP",
+  "HP Recovery",
+  "HP Recovery per Kill",
   "P. Atk",
   "P. Def",
   "M. Atk",
   "M. Def",
   "Ele. Atk",
   "Ele. Def",
-  "Spirit ATK",
+  "Spirit Atk",
   "Increase STR",
   "Increase AGI",
   "Increase INT",
@@ -14,10 +17,6 @@ const statOrder = [
   "Cr. Dmg",
   "Skill CD",
   "Atk Delay",
-  "HP Recovery per Kill",
-  "HP Recovery",
   "Movementspeed",
-  "Inventoryslots",
+  "Inventoryslots"
 ];
-
-export default statOrder;

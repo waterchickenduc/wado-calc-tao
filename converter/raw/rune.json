@@ -24,7 +24,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -52,7 +52,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -108,7 +108,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -136,7 +136,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -192,7 +192,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -444,7 +444,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -472,7 +472,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -500,7 +500,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -528,7 +528,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -556,7 +556,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -612,7 +612,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -640,7 +640,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -668,7 +668,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -696,7 +696,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -752,7 +752,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -780,7 +780,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -808,7 +808,7 @@
       "HP Recovery per attack": "0,45%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -864,7 +864,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -920,7 +920,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -948,7 +948,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -976,7 +976,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1004,7 +1004,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1088,7 +1088,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1200,7 +1200,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1228,7 +1228,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1256,7 +1256,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1284,7 +1284,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1312,7 +1312,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1340,7 +1340,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1368,7 +1368,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1396,7 +1396,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1424,7 +1424,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1452,7 +1452,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1480,7 +1480,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1508,7 +1508,7 @@
       "HP Recovery per attack": "0,30%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1536,7 +1536,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1564,7 +1564,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1592,7 +1592,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1620,7 +1620,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1648,7 +1648,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1676,7 +1676,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1704,7 +1704,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1732,7 +1732,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1760,7 +1760,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1788,7 +1788,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1844,7 +1844,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1872,7 +1872,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1928,7 +1928,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -1984,7 +1984,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2068,7 +2068,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2152,7 +2152,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2208,7 +2208,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2236,7 +2236,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2264,7 +2264,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2376,7 +2376,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2404,7 +2404,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2432,7 +2432,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2516,7 +2516,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2544,7 +2544,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2572,7 +2572,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2600,7 +2600,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2628,7 +2628,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2684,7 +2684,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2712,7 +2712,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2740,7 +2740,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2768,7 +2768,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2824,7 +2824,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2852,7 +2852,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2908,7 +2908,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2964,7 +2964,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -2992,7 +2992,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3076,7 +3076,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3104,7 +3104,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3132,7 +3132,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3216,7 +3216,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3244,7 +3244,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3272,7 +3272,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3300,7 +3300,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3328,7 +3328,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3356,7 +3356,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3384,7 +3384,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3412,7 +3412,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3440,7 +3440,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3496,7 +3496,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3524,7 +3524,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3552,7 +3552,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3608,7 +3608,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3636,7 +3636,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3664,7 +3664,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3692,7 +3692,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3720,7 +3720,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3748,7 +3748,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3776,7 +3776,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3804,7 +3804,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3832,7 +3832,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3860,7 +3860,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3888,7 +3888,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3916,7 +3916,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -3944,7 +3944,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4000,7 +4000,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4028,7 +4028,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4056,7 +4056,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4084,7 +4084,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4112,7 +4112,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4140,7 +4140,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4168,7 +4168,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4196,7 +4196,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4224,7 +4224,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4364,7 +4364,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4392,7 +4392,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4448,7 +4448,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4476,7 +4476,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4504,7 +4504,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4532,7 +4532,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4560,7 +4560,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4588,7 +4588,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4616,7 +4616,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4644,7 +4644,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4672,7 +4672,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4700,7 +4700,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4728,7 +4728,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4784,7 +4784,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4812,7 +4812,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4840,7 +4840,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -4896,7 +4896,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5036,7 +5036,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5064,7 +5064,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5148,7 +5148,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5176,7 +5176,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5204,7 +5204,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5232,7 +5232,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5288,7 +5288,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5316,7 +5316,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5344,7 +5344,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5400,7 +5400,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5428,7 +5428,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5456,7 +5456,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5484,7 +5484,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5540,7 +5540,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5568,7 +5568,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5596,7 +5596,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5624,7 +5624,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5652,7 +5652,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5708,7 +5708,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5736,7 +5736,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5792,7 +5792,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5820,7 +5820,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5848,7 +5848,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5904,7 +5904,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5960,7 +5960,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -5988,7 +5988,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6016,7 +6016,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6044,7 +6044,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6100,7 +6100,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6128,7 +6128,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6156,7 +6156,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6184,7 +6184,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6212,7 +6212,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6240,7 +6240,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6352,7 +6352,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6380,7 +6380,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6408,7 +6408,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6520,7 +6520,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6548,7 +6548,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6604,7 +6604,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6632,7 +6632,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6660,7 +6660,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6688,7 +6688,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6772,7 +6772,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6828,7 +6828,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6856,7 +6856,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6884,7 +6884,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6912,7 +6912,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6968,7 +6968,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -6996,7 +6996,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7024,7 +7024,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7052,7 +7052,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7164,7 +7164,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7192,7 +7192,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "3,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7248,7 +7248,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7276,7 +7276,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7304,7 +7304,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7332,7 +7332,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7388,7 +7388,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7416,7 +7416,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7444,7 +7444,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7472,7 +7472,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7528,7 +7528,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7556,7 +7556,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7584,7 +7584,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7612,7 +7612,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7640,7 +7640,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7668,7 +7668,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7696,7 +7696,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7724,7 +7724,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7752,7 +7752,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7780,7 +7780,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7808,7 +7808,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7864,7 +7864,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7892,7 +7892,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7920,7 +7920,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -7976,7 +7976,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8004,7 +8004,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8032,7 +8032,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8060,7 +8060,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8088,7 +8088,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8144,7 +8144,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8172,7 +8172,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8228,7 +8228,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8256,7 +8256,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8284,7 +8284,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8312,7 +8312,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8340,7 +8340,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8368,7 +8368,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8396,7 +8396,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8452,7 +8452,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8480,7 +8480,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8508,7 +8508,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8536,7 +8536,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8564,7 +8564,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8592,7 +8592,7 @@
       "HP Recovery per attack": "0,35%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8648,7 +8648,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8676,7 +8676,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8704,7 +8704,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8760,7 +8760,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8788,7 +8788,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8816,7 +8816,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8844,7 +8844,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8872,7 +8872,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8900,7 +8900,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -8984,7 +8984,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9012,7 +9012,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9040,7 +9040,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9068,7 +9068,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9096,7 +9096,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9152,7 +9152,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9180,7 +9180,7 @@
       "HP Recovery per attack": "0,30%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9208,7 +9208,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9236,7 +9236,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9264,7 +9264,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9292,7 +9292,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9348,7 +9348,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9376,7 +9376,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9404,7 +9404,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9460,7 +9460,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9488,7 +9488,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9516,7 +9516,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9600,7 +9600,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9684,7 +9684,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9712,7 +9712,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9740,7 +9740,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9768,7 +9768,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9796,7 +9796,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9824,7 +9824,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9880,7 +9880,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9936,7 +9936,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9964,7 +9964,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -9992,7 +9992,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10076,7 +10076,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10132,7 +10132,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10160,7 +10160,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10188,7 +10188,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10216,7 +10216,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10244,7 +10244,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10272,7 +10272,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10300,7 +10300,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10328,7 +10328,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10356,7 +10356,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10384,7 +10384,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10412,7 +10412,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10440,7 +10440,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10468,7 +10468,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10496,7 +10496,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10524,7 +10524,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10636,7 +10636,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10692,7 +10692,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10720,7 +10720,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10748,7 +10748,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10804,7 +10804,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10832,7 +10832,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10860,7 +10860,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10888,7 +10888,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10916,7 +10916,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -10972,7 +10972,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11028,7 +11028,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11084,7 +11084,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11112,7 +11112,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11140,7 +11140,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11280,7 +11280,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11308,7 +11308,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11336,7 +11336,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11364,7 +11364,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11392,7 +11392,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11420,7 +11420,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11448,7 +11448,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11476,7 +11476,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11504,7 +11504,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11532,7 +11532,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11560,7 +11560,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11588,7 +11588,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11616,7 +11616,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11728,7 +11728,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11756,7 +11756,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11784,7 +11784,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11812,7 +11812,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11840,7 +11840,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11868,7 +11868,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11896,7 +11896,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11952,7 +11952,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -11980,7 +11980,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12008,7 +12008,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12064,7 +12064,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12120,7 +12120,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12148,7 +12148,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12232,7 +12232,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12260,7 +12260,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12288,7 +12288,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12316,7 +12316,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12344,7 +12344,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "2,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12372,7 +12372,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12400,7 +12400,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12428,7 +12428,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12456,7 +12456,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12512,7 +12512,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12540,7 +12540,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12596,7 +12596,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12624,7 +12624,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12680,7 +12680,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12708,7 +12708,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12736,7 +12736,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12764,7 +12764,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12792,7 +12792,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12848,7 +12848,7 @@
       "HP Recovery per attack": "0,20%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12876,7 +12876,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12904,7 +12904,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12932,7 +12932,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -12988,7 +12988,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13128,7 +13128,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13156,7 +13156,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13184,7 +13184,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13268,7 +13268,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13324,7 +13324,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13352,7 +13352,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13380,7 +13380,7 @@
       "HP Recovery per attack": "0,25%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13436,7 +13436,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13464,7 +13464,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13492,7 +13492,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13520,7 +13520,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "1,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13548,7 +13548,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0,5%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13576,7 +13576,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "use",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13632,7 +13632,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13688,7 +13688,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "2,0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13716,7 +13716,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13856,7 +13856,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13884,7 +13884,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13912,7 +13912,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13940,7 +13940,7 @@
       "HP Recovery per attack": "0,10%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   },
   {
@@ -13996,7 +13996,7 @@
       "HP Recovery per attack": "0%",
       "HP Recovery per Kill": "0%",
       "Double Critical": "0%",
-      "Aura": "none",
+      "aura": null,
       "Aura Chance": "0%"
   }
 ]
