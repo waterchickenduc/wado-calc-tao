@@ -52,6 +52,19 @@ Let me know if you'd like to add aura handling, class stat merging into totals, 
 
 
 
+✅ Here’s what I need to pick up right where we left off:
+What’s next on the to-do list?
 
+Do you want to work on a new feature (e.g., PvP build simulator, export system, or rune synergy logic)?
+
+Or are we improving something (UI polish, bug fix, data format updates)?
+
+Any specific file or area you want to touch?
+
+Like maybe StatTable.jsx, the JSON parser, or something under converter/raw/.
+
+Do you have any new data (classes, runes, etc.) to integrate?
+
+I can help create or update flat JSON or auto-convert from game data.
 
 
