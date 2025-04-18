@@ -61,7 +61,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
         {/* Selected Runes */}
         <div className="bg-zinc-950 p-4 rounded-md border border-zinc-700">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mb-2">
             <h3 className="text-blue-400 font-bold">📦 Selected Runes</h3>
             <button
               onClick={handleClearRunes}
@@ -111,6 +111,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                 ))}
               </select>
             </div>
+
             <RuneSelector
               runes={filteredRunes}
               onAddRune={handleAddRune}
@@ -128,8 +129,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
       {/* Right side: Passive Stats */}
       <div className="w-full lg:w-96 bg-zinc-950 p-4 rounded-md border border-zinc-700">
-        <h3 className="text-blue-400 font-bold mb-2">🔢 Passive Stats</h3>
-        <StatTable runes={setup.runes} />
+        <StatTable runes={setup.runes} classes={setup.classes} />
       </div>
     </div>
   );

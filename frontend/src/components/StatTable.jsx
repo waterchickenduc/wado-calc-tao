@@ -1,81 +1,76 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import statList from "../data/stat.json";
 
-export default function StatTable({ setup }) {
-  const [activeTab, setActiveTab] = useState("total");
+export default function StatTable({ runes = [], classes = [] }) {
+  const [tab, setTab] = useState("total");
 
-  const totalStats = {};
-  const categorizedStats = {};
+  const totals = useMemo(() => {
+    const sum = {};
+    for (const stat of statList) sum[stat] = 0;
 
-  setup.runes.forEach((rune) => {
-    const count = rune._count || 1;
-
-    for (const [stat, value] of Object.entries(rune.stats)) {
-      const num = parseFloat(value) * count;
-
-      // Total
-      totalStats[stat] = (totalStats[stat] || 0) + num;
-
-      // Categorized by rune
-      if (!categorizedStats[rune.name]) {
-        categorizedStats[rune.name] = {};
+    runes.forEach((r) => {
+      for (const [k, v] of Object.entries(r.stats || {})) {
+        sum[k] = (sum[k] || 0) + v;
       }
-      categorizedStats[rune.name][stat] =
-        (categorizedStats[rune.name][stat] || 0) + num;
-    }
-  });
-
-  const formatValue = (val) =>
-    typeof val === "number" ? val.toFixed(2).replace(/\.00$/, "") : val;
+    });
+    return sum;
+  }, [runes]);
 
   return (
-    <div className="bg-zinc-950 rounded-md border border-zinc-700 p-4 mt-4">
-      <div className="flex justify-between items-center mb-3">
-        <h3 className="text-blue-400 font-bold text-lg">🔢 Passive Stats</h3>
-        <div className="space-x-2">
-          <button
-            className={`px-3 py-1 rounded-md text-sm ${
-              activeTab === "total" ? "bg-blue-600 text-white" : "bg-zinc-800"
-            }`}
-            onClick={() => setActiveTab("total")}
-          >
-            Total Stats
-          </button>
-          <button
-            className={`px-3 py-1 rounded-md text-sm ${
-              activeTab === "category" ? "bg-blue-600 text-white" : "bg-zinc-800"
-            }`}
-            onClick={() => setActiveTab("category")}
-          >
-            By Rune
-          </button>
-        </div>
+    <div>
+      <div className="flex gap-2 mb-3">
+        <button
+          className={`px-3 py-1 rounded ${
+            tab === "total" ? "bg-blue-600 text-white" : "bg-zinc-700 text-zinc-300"
+          }`}
+          onClick={() => setTab("total")}
+        >
+          Total Stats
+        </button>
+        <button
+          className={`px-3 py-1 rounded ${
+            tab === "matrix" ? "bg-blue-600 text-white" : "bg-zinc-700 text-zinc-300"
+          }`}
+          onClick={() => setTab("matrix")}
+        >
+          By Category
+        </button>
       </div>
 
-      {setup.runes.length === 0 ? (
-        <p className="text-zinc-500 text-sm italic">No data to display.</p>
-      ) : activeTab === "total" ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-white">
-          {Object.entries(totalStats).map(([stat, val]) => (
-            <div key={stat}>
-              {stat}: <strong>{formatValue(val)}</strong>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="space-y-3">
-          {Object.entries(categorizedStats).map(([runeName, stats]) => (
-            <div key={runeName}>
-              <div className="font-bold text-blue-300 mb-1">{runeName}</div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-white pl-2">
-                {Object.entries(stats).map(([stat, val]) => (
-                  <div key={`${runeName}-${stat}`}>
-                    {stat}: <strong>{formatValue(val)}</strong>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      {tab === "total" && (
+        <table className="w-full text-sm">
+          <tbody>
+            {Object.entries(totals)
+              .filter(([_, val]) => val !== 0)
+              .map(([key, val]) => (
+                <tr key={key}>
+                  <td className="text-zinc-400">{key}</td>
+                  <td className="text-right text-white font-mono">{val.toFixed(2)}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
+
+      {tab === "matrix" && (
+        <table className="w-full text-xs border-collapse mt-2 border border-zinc-700">
+          <thead>
+            <tr>
+              <th className="border border-zinc-700 p-1 text-left">Stat</th>
+              <th className="border border-zinc-700 p-1 text-center">Runes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(totals).map(([key, val]) => (
+              <tr key={key}>
+                <td className="border border-zinc-700 p-1 text-zinc-300">{key}</td>
+                <td className="border border-zinc-700 p-1 text-right font-mono">
+                  {val.toFixed(2)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
