@@ -1,63 +1,85 @@
-import React, { useState, useMemo } from "react";
-import Button from "./Button";
-import Input from "./Input";
-import runeData from "../../data/runes.json";
+// frontend/components/ui/SetupSelector.jsx
+import React, { useState } from "react";
 
-export default function SetupSelector({ setups, active, onSelect, onAdd, onRename, onDelete }) {
-  const [editId, setEditId] = useState(null);
-  const [renameValue, setRenameValue] = useState("");
+export default function SetupSelector({
+  setups = [],
+  activeIndex = 0,
+  onSelect = () => {},
+  onNew = () => {},
+  onRename = () => {},
+  onDelete = () => {},
+}) {
+  const [editingIndex, setEditingIndex] = useState(null);
+  const [tempName, setTempName] = useState("");
 
-  const filteredSetups = useMemo(() => setups.filter(Boolean), [setups]);
+  const startEditing = (index, currentName) => {
+    setEditingIndex(index);
+    setTempName(currentName);
+  };
+
+  const confirmRename = (index) => {
+    if (tempName.trim() !== "") {
+      onRename(index, tempName.trim());
+    }
+    setEditingIndex(null);
+  };
 
   return (
-    <div className="flex flex-wrap gap-2 items-center justify-center mb-4">
-      {filteredSetups.map((setup, index) => {
-        const isEditing = editId === setup.id;
+    <div className="flex items-center flex-wrap gap-2">
+      {setups.map((setup, i) => {
+        const isActive = i === activeIndex;
+        const isEditing = i === editingIndex;
 
         return (
-          <div key={setup.id} className="flex items-center gap-1">
+          <div
+            key={setup.id}
+            className={`flex items-center text-sm rounded px-3 py-1 cursor-pointer transition-all ${
+              isActive
+                ? "bg-blue-600 text-white"
+                : "bg-zinc-800 text-white hover:bg-zinc-700"
+            }`}
+          >
             {isEditing ? (
-              <Input
-                value={renameValue}
-                onChange={(e) => setRenameValue(e.target.value)}
-                onBlur={() => {
-                  onRename(setup.id, renameValue);
-                  setEditId(null);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    onRename(setup.id, renameValue);
-                    setEditId(null);
-                  }
-                }}
+              <input
+                type="text"
+                value={tempName}
                 autoFocus
-                className="px-2 py-1 text-sm"
+                onChange={(e) => setTempName(e.target.value)}
+                onBlur={() => confirmRename(i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") confirmRename(i);
+                  if (e.key === "Escape") setEditingIndex(null);
+                }}
+                className="bg-transparent text-white border-none outline-none w-24"
               />
             ) : (
-              <Button
-                variant={active === index ? "default" : "outline"}
-                onClick={() => onSelect(index)}
-                onDoubleClick={() => {
-                  setEditId(setup.id);
-                  setRenameValue(setup.name);
-                }}
+              <button
+                onClick={() => onSelect(i)}
+                onDoubleClick={() => startEditing(i, setup.name)}
+                className="mr-1"
+                title="Double-click to rename"
               >
-                {setup?.name || `Setup ${index + 1}`}
-              </Button>
+                {setup.name || `Setup ${i + 1}`}
+              </button>
             )}
+
             <button
-              onClick={() => onDelete(setup.id)}
-              className="text-red-400 hover:text-red-600 text-sm ml-1"
+              onClick={() => onDelete(i)}
               title="Delete setup"
+              className="text-white hover:text-red-300 ml-1 text-sm"
             >
-              🗑
+              ×
             </button>
           </div>
         );
       })}
-      <Button onClick={onAdd} variant="outline">
-        ＋ New Setup
-      </Button>
+
+      <button
+        onClick={onNew}
+        className="px-4 py-1 text-sm rounded border border-dashed border-zinc-600 text-white hover:border-blue-400"
+      >
+        ➕ New Setup
+      </button>
     </div>
   );
 }

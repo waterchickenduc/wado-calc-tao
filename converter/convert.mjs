@@ -56,21 +56,27 @@ function convertClasses() {
     output[baseClass] = {
       paths: paths.map((branch) => ({
         branch: branch.branch,
-        path: branch.path.map((cls) => ({
-          class: cls.class,
-          stats: Object.entries(cls.stats || {})
-            .map(([k, v]) => ({
-              Stat: k.trim(),
-              Value: cleanNumber(v),
-            }))
-            .filter(({ Value }) => Value !== 0)
-        }))
+        path: branch.path.map((cls) => {
+          const normalizedStats = {};
+          for (const [statKey, statVal] of Object.entries(cls.stats || {})) {
+            if (typeof statVal === "object" && statVal !== null) {
+              normalizedStats[statKey.trim()] = cleanNumber(statVal.Value);
+            } else {
+              normalizedStats[statKey.trim()] = cleanNumber(statVal);
+            }
+          }
+
+          return {
+            class: cls.class,
+            stats: normalizedStats
+          };
+        })
       }))
     };
   }
 
   fs.writeFileSync(`${outputDir}/adventureClasses.json`, JSON.stringify(output, null, 2));
-  console.log("✅ Converted adventure_class.json → adventureClasses.json");
+  console.log("✅ Normalized adventure_class.json → adventureClasses.json");
 }
 
 // ✅ BUFF CONVERTER

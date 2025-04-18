@@ -1,51 +1,80 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
+import runesData from "../data/runes.json";
+import RuneCard from "./RuneCard";
+import stats from "../data/stats.json";
 
-export default function RuneSelector({ runes, onAddRune, selectedRunes }) {
-  const runeCounts = selectedRunes.reduce((acc, rune) => {
-    acc[rune.name] = (acc[rune.name] || 0) + 1;
-    return acc;
-  }, {});
+export default function RuneSelector({ selectedRunes, onAddRune }) {
+  const [search, setSearch] = useState("");
+  const [filters, setFilters] = useState([]);
+
+  const toggleFilter = (stat) => {
+    setFilters((prev) =>
+      prev.includes(stat) ? prev.filter((s) => s !== stat) : [...prev, stat]
+    );
+  };
+
+  const filteredRunes = useMemo(() => {
+    return runesData.filter((rune) => {
+      const matchName = rune.name.toLowerCase().includes(search.toLowerCase());
+      const matchStats = filters.every((f) =>
+        rune.stats.some((s) => s.Stat === f && s.Value > 0)
+      );
+      return matchName && matchStats;
+    });
+  }, [search, filters]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-      {runes.map((rune, index) => (
-        <div
-          key={`${rune.name}-${index}`}
-          className="p-3 bg-zinc-900 border border-zinc-700 rounded-md"
+    <div className="space-y-4">
+      {/* Search & Filters */}
+      <div className="flex flex-wrap items-center gap-2">
+        <input
+          type="text"
+          className="bg-night-900 border border-night-700 px-3 py-1.5 text-white rounded w-full sm:w-auto"
+          placeholder="🔍 Search rune name or stat"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        <select
+          onChange={(e) => {
+            if (e.target.value) toggleFilter(e.target.value);
+            e.target.value = "";
+          }}
+          className="bg-night-800 text-white px-3 py-1.5 rounded border border-night-600"
         >
-          <h4 className="text-blue-400 font-semibold">
-            {rune.name}
-            {runeCounts[rune.name] ? (
-              <span className="ml-2 text-white">×{runeCounts[rune.name]}</span>
-            ) : null}
-          </h4>
-          <div className="flex flex-wrap gap-1 text-xs text-white mt-1">
-            {rune.runes.map((r, i) => (
-              <span
-                key={i}
-                className="bg-zinc-700 text-white px-2 py-1 rounded"
-              >
-                {r}
-              </span>
-            ))}
-          </div>
-          <ul className="text-sm mt-2 text-white">
-            {Object.entries(rune.stats).map(([stat, value]) =>
-              value ? (
-                <li key={stat}>
-                  {stat}: <span className="font-medium">{value}</span>
-                </li>
-              ) : null
-            )}
-          </ul>
-          <button
-            onClick={() => onAddRune(rune)}
-            className="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white text-sm rounded"
+          <option value="">➕ Add stat filter</option>
+          {stats.map((s, i) => (
+            <option key={i} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
+
+        {filters.map((f, i) => (
+          <span
+            key={i}
+            className="flex items-center bg-blue-600 text-white px-3 py-1 rounded-full"
           >
-            ➕ Add
-          </button>
-        </div>
-      ))}
+            {f}
+            <button
+              className="ml-2 text-white"
+              onClick={() => toggleFilter(f)}
+            >
+              ×
+            </button>
+            {i < filters.length - 1 && (
+              <span className="ml-2 text-sm font-bold text-white">AND</span>
+            )}
+          </span>
+        ))}
+      </div>
+
+      {/* Rune Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {filteredRunes.map((rune, idx) => (
+          <RuneCard key={idx} rune={rune} onAdd={onAddRune} />
+        ))}
+      </div>
     </div>
   );
 }

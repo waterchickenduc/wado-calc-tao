@@ -11,9 +11,12 @@ export default function App() {
     return saved
       ? JSON.parse(saved)
       : [
-          { id: Date.now(), name: "Setup 1", runes: [], classes: [] },
-          { id: Date.now() + 1, name: "Setup 2", runes: [], classes: [] },
-          { id: Date.now() + 2, name: "Setup 3", runes: [], classes: [] },
+          {
+            id: Date.now(),
+            name: "Setup 1",
+            runes: [],
+            classes: [],
+          },
         ];
   });
 
@@ -52,20 +55,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white font-inter">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-50 bg-zinc-950 border-b border-zinc-800 shadow px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+    <div className="min-h-screen bg-wado-bg text-white font-inter">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-wado-surface border-b border-wado-border shadow px-4 py-3 flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-xl md:text-2xl font-bold tracking-wide text-blue-400">
           ⚔️ WadoCalc Tao
         </h1>
 
         <div className="flex items-center flex-wrap gap-2">
-          <Button onClick={savePresets} variant="outline">
-            💾 Save
-          </Button>
-          <Button onClick={loadPresets} variant="outline">
-            📂 Load
-          </Button>
+          <Button onClick={savePresets} variant="outline">💾 Save</Button>
+          <Button onClick={loadPresets} variant="outline">📂 Load</Button>
           <Button
             variant={mode === "build" ? "default" : "outline"}
             onClick={() => setMode("build")}
@@ -81,8 +80,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* Setup Switcher + Selector */}
-      <div className="px-4 py-2 border-b border-zinc-800 bg-zinc-950 flex flex-wrap gap-4 items-center justify-between">
+      {/* Setup Tabs */}
+      <div className="px-4 py-2 border-b border-wado-border bg-wado-surface flex flex-wrap gap-4 items-center justify-between">
         {mode === "build" && (
           <SetupSelector
             setups={setups}
@@ -115,7 +114,7 @@ export default function App() {
         )}
       </div>
 
-      {/* Main Content */}
+      {/* Main Panel */}
       <main className="p-4 md:p-6">
         {mode === "build" ? (
           <SetupBuilder
@@ -123,7 +122,9 @@ export default function App() {
             updateSetup={(data) => updateSetup(activeSetup, data)}
             resetSetup={() => resetSetup(activeSetup)}
             setName={(name) =>
-              updateSetup(activeSetup, { name: name || `Setup ${activeSetup + 1}` })
+              updateSetup(activeSetup, {
+                name: name || `Setup ${activeSetup + 1}`,
+              })
             }
           />
         ) : (

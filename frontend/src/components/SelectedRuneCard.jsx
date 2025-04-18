@@ -1,21 +1,29 @@
 import React from "react";
+import RuneCard from "./RuneCard";
 
-export default function RuneCard({ rune, onAdd }) {
+export default function SelectedRuneCard({ rune, count, onRemove }) {
   return (
-    <div className="relative bg-night-800 border border-night-600 rounded-md p-4 text-white">
+    <div className="relative bg-night-900 border border-night-700 rounded-md p-4 text-white">
+      {/* Title & Stack */}
       <div className="flex justify-between items-start mb-2">
-        <h4 className="text-blue-400 font-semibold">{rune.name}</h4>
-        {onAdd && (
-          <button
-            onClick={() => onAdd(rune)}
-            className="text-white bg-blue-600 hover:bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-sm"
-            title="Add Rune"
-          >
-            +
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          <h4 className="text-blue-400 font-semibold">{rune.name}</h4>
+          {count > 1 && (
+            <span className="bg-night-700 text-sm px-2 py-0.5 rounded-full">
+              ×{count}
+            </span>
+          )}
+        </div>
+        <button
+          onClick={() => onRemove(rune)}
+          className="text-white hover:text-red-400"
+          title="Remove one from stack"
+        >
+          ✕
+        </button>
       </div>
 
+      {/* Stones */}
       <div className="flex flex-wrap gap-2 mb-3">
         {rune.runes.map((r, i) => (
           <span
@@ -27,6 +35,7 @@ export default function RuneCard({ rune, onAdd }) {
         ))}
       </div>
 
+      {/* Stats */}
       <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
         {rune.stats.slice(0, 10).map(({ Stat, Value }, i) => (
           <div key={i} className="flex justify-between whitespace-nowrap">

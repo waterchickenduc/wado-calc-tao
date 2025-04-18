@@ -6,65 +6,142 @@
         "path": [
           {
             "class": "Knight",
-            "stats": [
-              {
-                "Stat": "P. Def",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 5,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Berserker",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 10
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 10,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Barbarian",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 15
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 15,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Paladin",
-            "stats": [
-              {
-                "Stat": "Inventoryslots",
-                "Value": 7
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Inventoryslots": 7
+            }
           },
           {
             "class": "Guardian",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 5
-              },
-              {
-                "Stat": "M. Atk",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 5,
+              "P. Def": 0,
+              "M. Atk": 5,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Michael",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 9
-              },
-              {
-                "Stat": "M. Atk",
-                "Value": 9
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 9,
+              "P. Def": 0,
+              "M. Atk": 9,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           }
         ]
       },
@@ -73,61 +150,141 @@
         "path": [
           {
             "class": "Assassin",
-            "stats": [
-              {
-                "Stat": "Cr. Rate",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 5,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Death",
-            "stats": [
-              {
-                "Stat": "Cr. Dmg",
-                "Value": 15
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 15,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Lucifer",
-            "stats": [
-              {
-                "Stat": "Cr. Rate",
-                "Value": 10
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 10,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Venom",
-            "stats": [
-              {
-                "Stat": "Spirit Atk",
-                "Value": 10
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 10,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Shadower",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 5
-              },
-              {
-                "Stat": "M. Atk",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 5,
+              "P. Def": 0,
+              "M. Atk": 5,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Diablo",
-            "stats": [
-              {
-                "Stat": "Cr. Dmg",
-                "Value": 20
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 20,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           }
         ]
       },
@@ -136,69 +293,141 @@
         "path": [
           {
             "class": "Pyrene",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 3
-              },
-              {
-                "Stat": "M. Atk",
-                "Value": 3
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 3,
+              "P. Def": 0,
+              "M. Atk": 3,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Bishop",
-            "stats": [
-              {
-                "Stat": "Skill CD",
-                "Value": 5
-              },
-              {
-                "Stat": "Atk Delay",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 5,
+              "Atk Delay": 5,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Litch",
-            "stats": [
-              {
-                "Stat": "M. Atk",
-                "Value": 15
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 15,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Frieze",
-            "stats": [
-              {
-                "Stat": "M. Def",
-                "Value": 5
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 5,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Witch",
-            "stats": [
-              {
-                "Stat": "M. Atk",
-                "Value": 10
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 10,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           },
           {
             "class": "Gnome",
-            "stats": [
-              {
-                "Stat": "P. Atk",
-                "Value": 9
-              },
-              {
-                "Stat": "M. Atk",
-                "Value": 9
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 9,
+              "P. Def": 0,
+              "M. Atk": 9,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0
+            }
           }
         ]
       },
@@ -207,57 +436,149 @@
         "path": [
           {
             "class": "Hermit",
-            "stats": [
-              {
-                "Stat": "Inventoryslots",
-                "Value": 7
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Inventoryslots": 7
+            }
           },
           {
             "class": "Phantom",
-            "stats": [
-              {
-                "Stat": "Catchrate",
-                "Value": 50
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Higher Chance to tame 3 skills mercs": 0,
+              "Catchrate": 50
+            }
           },
           {
             "class": "Erebus",
-            "stats": [
-              {
-                "Stat": "Mercslot",
-                "Value": 1
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Mercslot": 1
+            }
           },
           {
             "class": "Monarch",
-            "stats": [
-              {
-                "Stat": "Mercslot",
-                "Value": 1
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Mercslot": 1
+            }
           },
           {
             "class": "Elementalist",
-            "stats": [
-              {
-                "Stat": "Catchrate",
-                "Value": 50
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Higher Chance to tame 3 skills mercs": 0,
+              "Catchrate": 50
+            }
           },
           {
             "class": "Uranus",
-            "stats": [
-              {
-                "Stat": "Mercslot",
-                "Value": 1
-              }
-            ]
+            "stats": {
+              "Health": 0,
+              "P. Atk": 0,
+              "P. Def": 0,
+              "M. Atk": 0,
+              "M. Def": 0,
+              "Ele. Atk": 0,
+              "Ele. Def": 0,
+              "Spirit Atk": 0,
+              "Increase STR": 0,
+              "Increase AGI": 0,
+              "Increase INT": 0,
+              "Cr. Rate": 0,
+              "Cr. Dmg": 0,
+              "Skill CD": 0,
+              "Atk Delay": 0,
+              "HP Recovery per Kill": 0,
+              "HP Recovery": 0,
+              "Movementspeed": 0,
+              "Mercslot": 1
+            }
           }
         ]
       }

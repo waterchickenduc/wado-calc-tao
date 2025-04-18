@@ -1,57 +1,36 @@
-import React from 'react';
+import React from "react";
+import statOrder from "../lib/statOrder";
 
-const statKeys = [
-  'health', 'p_atk', 'p_def', 'm_atk', 'm_def',
-  'ele_atk', 'ele_def', 'spirit_atk',
-  'increase_str', 'increase_agi', 'increase_int',
-  'cr_rate', 'cr_dmg', 'skill_cd', 'atk_delay',
-  'hp_recovery_per_kill', 'hp_recovery', 'movementspeed',
-];
+export default function StatsSummary({ runeStats, classStats }) {
+  const allStats = [...new Set([...Object.keys(runeStats || {}), ...Object.keys(classStats || {})])];
 
-const displayNames = {
-  health: 'Health',
-  p_atk: 'P. Atk',
-  p_def: 'P. Def',
-  m_atk: 'M. Atk',
-  m_def: 'M. Def',
-  ele_atk: 'Ele. Atk',
-  ele_def: 'Ele. Def',
-  spirit_atk: 'Spirit Atk',
-  increase_str: 'Increase STR',
-  increase_agi: 'Increase AGI',
-  increase_int: 'Increase INT',
-  cr_rate: 'Crit Rate',
-  cr_dmg: 'Crit Dmg',
-  skill_cd: 'Skill CD',
-  atk_delay: 'Atk Delay',
-  hp_recovery_per_kill: 'HP Recovery / Kill',
-  hp_recovery: 'HP Recovery',
-  movementspeed: 'Movement Speed',
-};
-
-function sumStats(items) {
-  const total = {};
-  statKeys.forEach((key) => (total[key] = 0));
-  items.forEach((item) => {
-    const stats = item.stats || {};
-    statKeys.forEach((key) => {
-      total[key] += Number(stats[key] || 0);
-    });
-  });
-  return total;
-}
-
-export default function StatsSummary({ runes, classes }) {
-  const total = sumStats([...runes, ...classes]);
+  const displayStats = statOrder
+    .filter((stat) => allStats.includes(stat))
+    .map((stat) => ({
+      name: stat,
+      rune: runeStats?.[stat] || 0,
+      class: classStats?.[stat] || 0,
+    }))
+    .filter(({ rune, class: cls }) => rune !== 0 || cls !== 0);
 
   return (
-    <div className="text-sm space-y-1">
-      {statKeys.map((key) => (
-        <div key={key} className="flex justify-between">
-          <span className="text-gray-400">{displayNames[key]}</span>
-          <span className="font-mono text-right">{total[key].toFixed(2)}%</span>
-        </div>
-      ))}
+    <div className="bg-zinc-900 border border-zinc-700 p-4 rounded w-full md:max-w-xs">
+      <h3 className="text-white font-semibold mb-4 text-lg">📊 Stats Summary</h3>
+      <div className="grid grid-cols-4 text-sm gap-y-2 text-white/90">
+        <span className="col-span-1 font-semibold">Stat</span>
+        <span className="text-right font-semibold">Runes</span>
+        <span className="text-right font-semibold">Classes</span>
+        <span className="text-right font-semibold">Total</span>
+
+        {displayStats.map(({ name, rune, class: cls }) => (
+          <React.Fragment key={name}>
+            <span className="truncate">{name}</span>
+            <span className="text-right">{rune.toFixed(2)}%</span>
+            <span className="text-right">{cls.toFixed(2)}%</span>
+            <span className="text-right font-semibold">{(rune + cls).toFixed(2)}%</span>
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 }
