@@ -46,3 +46,12 @@ mercs !
 🌍 Export builds as URL
 
 🎯 Filter by rune tags like “Othala”
+Let me know if you'd like to add aura handling, class stat merging into totals, or export features 📦.
+
+
+
+
+
+
+
+

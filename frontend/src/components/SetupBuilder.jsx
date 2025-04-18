@@ -18,10 +18,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
       const matchesName = rune.name.toLowerCase().includes(runeFilter.toLowerCase());
       const matchesStat =
         !statFilter ||
-        Object.keys(rune.stats).some(
-          (stat) =>
-            stat.toLowerCase().includes(statFilter.toLowerCase()) &&
-            rune.stats[stat] !== 0
+        Object.entries(rune.stats || {}).some(
+          ([key, value]) =>
+            key.toLowerCase().includes(statFilter.toLowerCase()) && value !== 0
         );
       return matchesName && matchesStat;
     });
@@ -44,7 +43,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   return (
     <div className="flex flex-col lg:flex-row gap-6">
-      {/* Left: Setup Controls */}
+      {/* Left side */}
       <div className="flex-1 space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Input
@@ -58,19 +57,16 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </Button>
         </div>
 
-        {/* Selected Runes */}
         <div className="bg-zinc-950 p-4 rounded-md border border-zinc-700">
-          <div className="flex justify-between items-center mb-2">
+          <div className="flex justify-between items-center">
             <h3 className="text-blue-400 font-bold">📦 Selected Runes</h3>
             <button onClick={handleClearRunes} className="text-red-400 text-sm hover:underline">
               🧹 Clear All
             </button>
           </div>
           <SelectedRunes runes={setup.runes} onRemove={handleRemoveRune} />
-          <p className="text-xs text-zinc-400 mt-2">{setup.runes.length} / 6 equipped</p>
         </div>
 
-        {/* Tabs */}
         <div className="flex gap-2">
           <Button onClick={() => setTab("runes")} variant={tab === "runes" ? "default" : "outline"}>
             🔮 Runes
@@ -80,7 +76,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </Button>
         </div>
 
-        {/* Rune Filter & Selector */}
         {tab === "runes" && (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -110,7 +105,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </>
         )}
 
-        {/* Class Selector */}
         {tab === "classes" && (
           <div className="p-4 border border-zinc-800 bg-zinc-950 rounded-md">
             <ClassSelector setup={setup} updateSetup={updateSetup} />
@@ -118,10 +112,10 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         )}
       </div>
 
-      {/* Right: Total Stats */}
+      {/* Right side */}
       <div className="w-full lg:w-96 bg-zinc-950 p-4 rounded-md border border-zinc-700">
         <h3 className="text-blue-400 font-bold mb-2">🔢 Passive Stats</h3>
-        <StatTable runes={setup.runes} classes={setup.classes} />
+        <StatTable runes={setup.runes} classes={setup.classes || []} />
       </div>
     </div>
   );
