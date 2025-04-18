@@ -24,3 +24,25 @@ Show message if rune is maxed (6x)?
 Add subtle click animation?
 
 Show current number of rune stacks?
+
+add ssl, change ports
+
+Animate tabs or responsive toggle for mobile?
+
+Would you like to show total stat preview from class as well?
+
+Would you like the selected class to also affect the StatTable?
+Or maybe combine class stats and rune stats in the right panel? 💡
+Let me know how deep you'd like the integration to go.
+UI tweaks
+class validation
+aura view
+pot !
+mercs !
+💾 Save/Load builds as JSON
+
+💡 Preview aura info
+
+🌍 Export builds as URL
+
+🎯 Filter by rune tags like “Othala”

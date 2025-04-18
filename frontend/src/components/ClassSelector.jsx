@@ -1,12 +1,14 @@
-import React from 'react';
-import adventureClasses from '../data/adventureClasses.json';
+// frontend/src/components/ClassSelector.jsx
+import React from "react";
+import adventureClasses from "../data/adventureClasses.json";
 
-export default function ClassSelector({ selectedClasses, setSelectedClasses }) {
+export default function ClassSelector({ selected = [], onChange }) {
   const toggleClass = (id) => {
-    if (selectedClasses.includes(id)) {
-      setSelectedClasses(selectedClasses.filter(cid => cid !== id));
+    if (selected.includes(id)) {
+      onChange(selected.filter((cid) => cid !== id));
     } else {
-      setSelectedClasses([...selectedClasses, id]);
+      // 🧠 Allow only one class at a time
+      onChange([id]);
     }
   };
 
@@ -19,33 +21,36 @@ export default function ClassSelector({ selectedClasses, setSelectedClasses }) {
   }, {});
 
   return (
-    <div className="text-white">
-      <p className="text-sm text-gray-400 mb-4">
-        Selected Classes ({selectedClasses.length})
+    <div className="space-y-6">
+      <p className="text-sm text-zinc-400">
+        Selected Class:{" "}
+        {selected.length > 0 ? (
+          <span className="text-blue-400 font-medium">{selected[0]}</span>
+        ) : (
+          <span className="italic text-zinc-500">None</span>
+        )}
       </p>
 
-      <div className="space-y-4">
-        {Object.entries(grouped).map(([title, classes]) => (
-          <div key={title}>
-            <h3 className="font-semibold text-blue-400 mb-2">{title}</h3>
-            <div className="flex flex-wrap gap-2">
-              {classes.map((cls, idx) => (
-                <button
-                  key={cls.id}
-                  onClick={() => toggleClass(cls.id)}
-                  className={`px-4 py-1 rounded-full text-sm font-medium transition-all border ${
-                    selectedClasses.includes(cls.id)
-                      ? 'bg-blue-600 text-white border-blue-400'
-                      : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-blue-800'
-                  }`}
-                >
-                  {cls.class}
-                </button>
-              ))}
-            </div>
+      {Object.entries(grouped).map(([title, classes]) => (
+        <div key={title}>
+          <h3 className="text-blue-400 font-bold mb-2">{title}</h3>
+          <div className="flex flex-wrap gap-2">
+            {classes.map((cls) => (
+              <button
+                key={cls.id}
+                onClick={() => toggleClass(cls.id)}
+                className={`px-4 py-1 rounded-full text-sm font-medium border transition ${
+                  selected.includes(cls.id)
+                    ? "bg-blue-600 text-white border-blue-400"
+                    : "bg-zinc-800 text-zinc-300 border-zinc-600 hover:bg-blue-800"
+                }`}
+              >
+                {cls.class}
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }

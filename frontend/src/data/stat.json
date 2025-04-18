@@ -1,56 +1,20 @@
 [
-  {
-    "Stat": "Atk Delay"
-  },
-  {
-    "Stat": "Cr. Dmg"
-  },
-  {
-    "Stat": "Cr. Rate"
-  },
-  {
-    "Stat": "Ele. Atk"
-  },
-  {
-    "Stat": "Ele. Def"
-  },
-  {
-    "Stat": "Health"
-  },
-  {
-    "Stat": "HP Recovery"
-  },
-  {
-    "Stat": "HP Recovery per Kill"
-  },
-  {
-    "Stat": "Increase AGI"
-  },
-  {
-    "Stat": "Increase INT"
-  },
-  {
-    "Stat": "Increase STR"
-  },
-  {
-    "Stat": "M. Atk"
-  },
-  {
-    "Stat": "M. Def"
-  },
-  {
-    "Stat": "Movementspeed"
-  },
-  {
-    "Stat": "P. Atk"
-  },
-  {
-    "Stat": "P. Def"
-  },
-  {
-    "Stat": "Skill CD"
-  },
-  {
-    "Stat": "Spirit Atk"
-  }
+  "Atk Delay",
+  "Cr. Dmg",
+  "Cr. Rate",
+  "Ele. Atk",
+  "Ele. Def",
+  "HP Recovery",
+  "HP Recovery per Kill",
+  "Health",
+  "Increase AGI",
+  "Increase INT",
+  "Increase STR",
+  "M. Atk",
+  "M. Def",
+  "Movementspeed",
+  "P. Atk",
+  "P. Def",
+  "Skill CD",
+  "Spirit Atk"
 ]
