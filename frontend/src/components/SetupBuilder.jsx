@@ -44,9 +44,8 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   return (
     <div className="flex flex-col lg:flex-row gap-6">
-      {/* Left side: Setup controls */}
+      {/* Left: Setup Controls */}
       <div className="flex-1 space-y-6">
-        {/* Setup Name + Reset */}
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Input
             value={setup.name}
@@ -63,33 +62,25 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         <div className="bg-zinc-950 p-4 rounded-md border border-zinc-700">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-blue-400 font-bold">📦 Selected Runes</h3>
-            <button
-              onClick={handleClearRunes}
-              className="text-red-400 text-sm hover:underline"
-            >
+            <button onClick={handleClearRunes} className="text-red-400 text-sm hover:underline">
               🧹 Clear All
             </button>
           </div>
           <SelectedRunes runes={setup.runes} onRemove={handleRemoveRune} />
+          <p className="text-xs text-zinc-400 mt-2">{setup.runes.length} / 6 equipped</p>
         </div>
 
-        {/* Tab Switch */}
+        {/* Tabs */}
         <div className="flex gap-2">
-          <Button
-            onClick={() => setTab("runes")}
-            variant={tab === "runes" ? "default" : "outline"}
-          >
+          <Button onClick={() => setTab("runes")} variant={tab === "runes" ? "default" : "outline"}>
             🔮 Runes
           </Button>
-          <Button
-            onClick={() => setTab("classes")}
-            variant={tab === "classes" ? "default" : "outline"}
-          >
+          <Button onClick={() => setTab("classes")} variant={tab === "classes" ? "default" : "outline"}>
             🧠 Classes
           </Button>
         </div>
 
-        {/* Tab Content */}
+        {/* Rune Filter & Selector */}
         {tab === "runes" && (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -111,7 +102,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                 ))}
               </select>
             </div>
-
             <RuneSelector
               runes={filteredRunes}
               onAddRune={handleAddRune}
@@ -120,6 +110,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </>
         )}
 
+        {/* Class Selector */}
         {tab === "classes" && (
           <div className="p-4 border border-zinc-800 bg-zinc-950 rounded-md">
             <ClassSelector setup={setup} updateSetup={updateSetup} />
@@ -127,8 +118,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         )}
       </div>
 
-      {/* Right side: Passive Stats */}
+      {/* Right: Total Stats */}
       <div className="w-full lg:w-96 bg-zinc-950 p-4 rounded-md border border-zinc-700">
+        <h3 className="text-blue-400 font-bold mb-2">🔢 Passive Stats</h3>
         <StatTable runes={setup.runes} classes={setup.classes} />
       </div>
     </div>
