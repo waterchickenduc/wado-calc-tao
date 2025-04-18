@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your frontend directory
-DIR="./"
+DIR="./frontend"
 
 echo "🚮 Removing node_modules and package-lock.json..."
 rm -rf "$DIR/node_modules" "$DIR/package-lock.json"

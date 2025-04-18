@@ -1,179 +1,217 @@
 import React, { useState, useEffect } from "react";
 import runeData from "../data/runes.json";
 import classData from "../data/adventureClasses.json";
-import statList from "../data/stat.json";
+import statList from "../data/stats.json";
 import { cn } from "../lib/utils";
 
 const SetupBuilder = ({ setup, updateSetup, resetSetup, setName }) => {
-  const [selectedRunes, setSelectedRunes] = useState(setup.runes || []);
-  const [selectedClasses, setSelectedClasses] = useState(setup.classes || []);
+  const [activeTab, setActiveTab] = useState("Runes");
   const [searchTerm, setSearchTerm] = useState("");
   const [statFilter, setStatFilter] = useState("");
 
-  useEffect(() => {
-    updateSetup({ runes: selectedRunes, classes: selectedClasses });
-  }, [selectedRunes, selectedClasses]);
+  const allRunes = runeData || [];
+  const allStats = statList || [];
+  const selectedRunes = setup.runes || [];
+  const selectedClasses = setup.classes || [];
 
-  const addRune = (rune) => {
+  const handleRuneClick = (runeName) => {
     if (selectedRunes.length >= 6) return;
-    setSelectedRunes((prev) => [...prev, rune]);
+    updateSetup({ runes: [...selectedRunes, runeName] });
   };
 
-  const removeRune = (index) => {
-    const updated = [...selectedRunes];
-    updated.splice(index, 1);
-    setSelectedRunes(updated);
+  const removeRune = (runeName) => {
+    const index = selectedRunes.indexOf(runeName);
+    if (index !== -1) {
+      const updated = [...selectedRunes];
+      updated.splice(index, 1);
+      updateSetup({ runes: updated });
+    }
   };
 
-  const toggleClass = (cls) => {
-    const exists = selectedClasses.find((c) => c.class === cls.class);
-    if (exists) return; // Already selected
-    setSelectedClasses([...selectedClasses, cls]);
+  const handleClassClick = (clsName) => {
+    if (selectedClasses.includes(clsName)) return;
+    updateSetup({ classes: [...selectedClasses, clsName] });
   };
 
-  const removeClass = (cls) => {
-    setSelectedClasses((prev) =>
-      prev.filter((c) => c.class !== cls.class)
-    );
+  const removeClass = (clsName) => {
+    updateSetup({ classes: selectedClasses.filter((c) => c !== clsName) });
+  };
+
+  const getFilteredRunes = () => {
+    let filtered = allRunes;
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      filtered = filtered.filter((r) =>
+        r.name.toLowerCase().includes(term) ||
+        r.runes.some((stone) => (stone || "").toLowerCase().includes(term))
+      );
+    }
+    if (statFilter) {
+      filtered = filtered.filter((r) => r.stats[statFilter] > 0);
+    }
+    return filtered;
   };
 
   const calculateStats = () => {
-    const totals = {};
-    statList.forEach(({ Stat }) => {
-      totals[Stat] = 0;
-    });
+    const result = {};
+    [...selectedRunes, ...selectedClasses].forEach((name) => {
+      const rune = allRunes.find((r) => r.name === name);
+      const cls = Object.values(classData).flatMap((b) => b.paths).flatMap((p) => p.path).find((c) => c.class === name);
+      const source = rune || cls;
 
-    const parseValue = (v) => parseFloat((v || "0").replace(",", ".").replace("%", ""));
-
-    selectedRunes.forEach((rune) => {
-      Object.entries(rune.stats).forEach(([key, value]) => {
-        if (key in totals) {
-          totals[key] += parseValue(value);
+      if (source?.stats) {
+        for (const [k, v] of Object.entries(source.stats)) {
+          result[k] = (result[k] || 0) + v;
         }
-      });
+      }
     });
-
-    selectedClasses.forEach((cls) => {
-      Object.entries(cls.stats).forEach(([key, value]) => {
-        if (key in totals) {
-          totals[key] += parseValue(value);
-        }
-      });
-    });
-
-    return totals;
+    return result;
   };
-
-  const filteredRunes = runeData.filter((rune) => {
-    const matchSearch = rune.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchStat = statFilter
-      ? Object.entries(rune.stats || {}).some(([k, v]) => k === statFilter && parseFloat(v) !== 0)
-      : true;
-    return matchSearch && matchStat;
-  });
 
   const totalStats = calculateStats();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {/* Left: Rune Selection */}
-      <div className="col-span-2 space-y-4">
-        <div className="flex gap-2">
+    <div className="flex flex-col md:flex-row gap-6">
+      {/* Left Side: Builder */}
+      <div className="w-full md:w-3/4">
+        <h2 className="text-xl font-semibold mb-2">WadoCalc Tao</h2>
+        <div className="flex items-center gap-3 mb-2">
           <input
-            className="w-full p-2 bg-zinc-800 text-white rounded"
-            placeholder="🔍 Search runes..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            className="bg-zinc-800 px-2 py-1 rounded text-white"
+            value={setup.name}
+            onChange={(e) => setName(e.target.value)}
           />
-          <select
-            className="p-2 bg-zinc-800 text-white rounded"
-            value={statFilter}
-            onChange={(e) => setStatFilter(e.target.value)}
+          <button className="bg-red-600 text-white px-3 py-1 rounded" onClick={resetSetup}>
+            Reset
+          </button>
+        </div>
+
+        <div className="flex gap-2 mb-4">
+          <button
+            className={cn("px-4 py-2 rounded", activeTab === "Runes" ? "bg-blue-600 text-white" : "bg-zinc-700")}
+            onClick={() => setActiveTab("Runes")}
           >
-            <option value="">All Stats</option>
-            {statList.map(({ Stat }) => (
-              <option key={Stat} value={Stat}>{Stat}</option>
-            ))}
-          </select>
+            Runes
+          </button>
+          <button
+            className={cn("px-4 py-2 rounded", activeTab === "Classes" ? "bg-blue-600 text-white" : "bg-zinc-700")}
+            onClick={() => setActiveTab("Classes")}
+          >
+            Classes
+          </button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-[400px] overflow-y-auto">
-          {filteredRunes.map((rune, i) => (
-            <div
-              key={i}
-              onClick={() => addRune(rune)}
-              className="cursor-pointer border border-zinc-700 hover:border-blue-400 bg-zinc-800 rounded p-2 text-sm hover:bg-zinc-700 transition"
-            >
-              <strong>{rune.name}</strong>
-              <div className="text-xs text-gray-400">{rune.runes?.join(" + ")}</div>
-              <div className="text-xs">
-                {Object.entries(rune.stats)
-                  .filter(([_, v]) => parseFloat((v || "0").replace(",", ".").replace("%", "")) !== 0)
-                  .map(([k, v]) => (
-                    <div key={k}>
-                      {k}: {v}
-                    </div>
-                  ))}
-              </div>
+        {/* Runes / Classes tab */}
+        {activeTab === "Runes" ? (
+          <>
+            <div className="mb-2 text-sm">
+              Selected Runes ({selectedRunes.length}/6) — <span className="text-blue-400">Click to remove</span>
             </div>
-          ))}
-        </div>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {selectedRunes.map((r, idx) => (
+                <button key={`${r}-${idx}`} onClick={() => removeRune(r)} className="bg-blue-500 px-2 py-1 rounded">
+                  {r}
+                </button>
+              ))}
+            </div>
 
-        <div className="mt-4">
-          <h3 className="text-blue-400 font-semibold mb-2">🧩 Selected Runes ({selectedRunes.length}/6)</h3>
-          <div className="flex flex-wrap gap-2">
-            {selectedRunes.map((rune, index) => (
-              <div
-                key={index}
-                onClick={() => removeRune(index)}
-                className="bg-blue-700 hover:bg-red-700 text-white px-2 py-1 rounded cursor-pointer text-sm"
-              >
-                {rune.name}
+            <input
+              className="bg-zinc-800 px-3 py-1 rounded w-full mb-3"
+              placeholder="Search runes..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+
+            <select
+              className="bg-zinc-800 px-3 py-1 rounded w-full mb-4"
+              value={statFilter}
+              onChange={(e) => setStatFilter(e.target.value)}
+            >
+              <option value="">Filter by stat</option>
+              {Object.keys(allRunes[0]?.stats || {}).sort().map((stat) => (
+                <option key={stat} value={stat}>
+                  {stat}
+                </option>
+              ))}
+            </select>
+
+            <div className="grid md:grid-cols-2 gap-3">
+              {getFilteredRunes().map((rune) => (
+                <div key={rune.name} className="bg-zinc-800 p-3 rounded">
+                  <div className="flex justify-between items-center">
+                    <div className="font-semibold">{rune.name}</div>
+                    <button onClick={() => handleRuneClick(rune.name)} className="text-sm bg-blue-600 px-2 py-1 rounded">
+                      +
+                    </button>
+                  </div>
+                  <div className="text-sm text-gray-300">{rune.runes.join(", ")}</div>
+                  <ul className="text-xs mt-1">
+                    {Object.entries(rune.stats)
+                      .filter(([, v]) => v !== 0)
+                      .map(([k, v]) => (
+                        <li key={k}>
+                          {k}: {v}%
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="mb-2 text-sm">
+              Selected Classes ({selectedClasses.length}) — <span className="text-blue-400">Click to remove</span>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {selectedClasses.map((c) => (
+                <button key={c} onClick={() => removeClass(c)} className="bg-purple-600 px-2 py-1 rounded">
+                  {c}
+                </button>
+              ))}
+            </div>
+
+            {Object.entries(classData).map(([base, { paths }]) => (
+              <div key={base} className="mb-4">
+                <h3 className="font-bold text-lg">{base}</h3>
+                {paths.map((branch, i) => (
+                  <div key={i} className="flex flex-wrap gap-2 my-1">
+                    {branch.path.map((cls) => (
+                      <button
+                        key={cls.class}
+                        onClick={() => handleClassClick(cls.class)}
+                        disabled={selectedClasses.includes(cls.class)}
+                        className={cn(
+                          "px-2 py-1 rounded",
+                          selectedClasses.includes(cls.class)
+                            ? "bg-zinc-700 text-gray-500"
+                            : "bg-purple-600 text-white"
+                        )}
+                      >
+                        {cls.class}
+                      </button>
+                    ))}
+                  </div>
+                ))}
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <h3 className="text-blue-400 font-semibold mb-2">⚔️ Available Classes</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-            {Object.values(classData.Adventurer.paths).flatMap((p) => p.path).map((cls, i) => (
-              <div
-                key={i}
-                onClick={() => toggleClass(cls)}
-                className="cursor-pointer bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-green-500 p-2 rounded"
-              >
-                {cls.class}
-              </div>
-            ))}
-          </div>
-
-          <h3 className="text-blue-400 font-semibold mt-4">🎓 Selected Classes ({selectedClasses.length})</h3>
-          <div className="flex flex-wrap gap-2">
-            {selectedClasses.map((cls, index) => (
-              <div
-                key={index}
-                onClick={() => removeClass(cls)}
-                className="bg-green-700 hover:bg-red-700 px-2 py-1 text-sm rounded cursor-pointer"
-              >
-                {cls.class}
-              </div>
-            ))}
-          </div>
-        </div>
+          </>
+        )}
       </div>
 
-      {/* Right: Total Stats */}
-      <div className="bg-zinc-800 rounded-lg p-4 h-fit sticky top-4">
-        <h3 className="text-xl font-semibold text-blue-400 mb-2">📊 Total Passive Stats</h3>
-        <table className="w-full text-sm">
+      {/* Right Side: Total Stats */}
+      <div className="w-full md:w-1/4 bg-zinc-800 rounded p-4 h-fit sticky top-4">
+        <h2 className="text-lg font-bold mb-2">📊 Total Passive Stats</h2>
+        <table className="text-sm w-full">
           <tbody>
-            {Object.entries(totalStats).map(([key, value]) => (
-              <tr key={key} className="border-b border-zinc-700">
-                <td className="py-1 text-gray-300">{key}</td>
-                <td className="py-1 text-right text-white font-mono">{value.toFixed(2)}%</td>
-              </tr>
-            ))}
+            {Object.entries(totalStats)
+              .sort()
+              .map(([k, v]) => (
+                <tr key={k} className="border-b border-zinc-700">
+                  <td className="pr-2">{k}</td>
+                  <td className="text-right">{v.toFixed(2)}%</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>

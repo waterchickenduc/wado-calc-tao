@@ -1,74 +1,56 @@
 [
   {
-    "Stat": "Health",
-    "key": "health"
+    "Stat": "Atk Delay"
   },
   {
-    "Stat": "P. Atk",
-    "key": "p_atk"
+    "Stat": "Cr. Dmg"
   },
   {
-    "Stat": "P. Def",
-    "key": "p_def"
+    "Stat": "Cr. Rate"
   },
   {
-    "Stat": "M. Atk",
-    "key": "m_atk"
+    "Stat": "Ele. Atk"
   },
   {
-    "Stat": "M. Def",
-    "key": "m_def"
+    "Stat": "Ele. Def"
   },
   {
-    "Stat": "Ele. Atk",
-    "key": "ele_atk"
+    "Stat": "Health"
   },
   {
-    "Stat": "Ele. Def",
-    "key": "ele_def"
+    "Stat": "HP Recovery"
   },
   {
-    "Stat": "Spirit Atk",
-    "key": "spirit_atk"
+    "Stat": "HP Recovery per Kill"
   },
   {
-    "Stat": "Increase STR",
-    "key": "increase_str"
+    "Stat": "Increase AGI"
   },
   {
-    "Stat": "Increase AGI",
-    "key": "increase_agi"
+    "Stat": "Increase INT"
   },
   {
-    "Stat": "Increase INT",
-    "key": "increase_int"
+    "Stat": "Increase STR"
   },
   {
-    "Stat": "Cr. Rate",
-    "key": "cr_rate"
+    "Stat": "M. Atk"
   },
   {
-    "Stat": "Cr. Dmg",
-    "key": "cr_dmg"
+    "Stat": "M. Def"
   },
   {
-    "Stat": "Skill CD",
-    "key": "skill_cd"
+    "Stat": "Movementspeed"
   },
   {
-    "Stat": "Atk Delay",
-    "key": "atk_delay"
+    "Stat": "P. Atk"
   },
   {
-    "Stat": "HP Recovery per Kill",
-    "key": "hp_recovery_per_kill"
+    "Stat": "P. Def"
   },
   {
-    "Stat": "HP Recovery",
-    "key": "hp_recovery"
+    "Stat": "Skill CD"
   },
   {
-    "Stat": "Movementspeed",
-    "key": "movementspeed"
+    "Stat": "Spirit Atk"
   }
 ]
