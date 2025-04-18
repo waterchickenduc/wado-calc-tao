@@ -1,33 +1,23 @@
-import React, { useState } from "react";
-import classNames from "../../lib/cn";
+import React from "react";
+import { cn } from "../../lib/utils";
 
-export function Tabs({ tabs, className = "", defaultIndex = 0, onChange }) {
-  const [active, setActive] = useState(defaultIndex);
-
-  const select = (i) => {
-    setActive(i);
-    onChange?.(i);
-  };
-
+export default function Tabs({ tabs, active, onTabClick }) {
   return (
-    <div className={className}>
-      <div className="flex space-x-2 border-b border-gray-700 mb-2">
-        {tabs.map((tab, i) => (
-          <button
-            key={i}
-            className={classNames(
-              "px-4 py-2 text-sm rounded-t-md",
-              i === active
-                ? "bg-zinc-800 text-blue-400 border-b-2 border-blue-500"
-                : "text-gray-400 hover:text-white"
-            )}
-            onClick={() => select(i)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      <div>{tabs[active]?.content}</div>
+    <div className="flex space-x-2">
+      {tabs.map((tab) => (
+        <button
+          key={tab}
+          onClick={() => onTabClick(tab)}
+          className={cn(
+            "px-4 py-2 rounded-md text-sm",
+            active === tab
+              ? "bg-brand text-white"
+              : "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+          )}
+        >
+          {tab}
+        </button>
+      ))}
     </div>
   );
 }

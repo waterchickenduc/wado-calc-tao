@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SetupBuilder from "./components/SetupBuilder";
 import CompareView from "./components/CompareView";
+import SetupSelector from "./components/ui/SetupSelector";
 import Button from "./components/ui/Button";
 import "./index.css";
 
 export default function App() {
-  const [setups, setSetups] = useState([
-    { id: 1, name: "Setup 1", runes: [], classes: [] },
-    { id: 2, name: "Setup 2", runes: [], classes: [] },
-    { id: 3, name: "Setup 3", runes: [], classes: [] },
-  ]);
+  const [setups, setSetups] = useState(() => {
+    const saved = localStorage.getItem("wado_setups");
+    return saved
+      ? JSON.parse(saved)
+      : [
+          { id: Date.now(), name: "Setup 1", runes: [], classes: [] },
+          { id: Date.now() + 1, name: "Setup 2", runes: [], classes: [] },
+          { id: Date.now() + 2, name: "Setup 3", runes: [], classes: [] },
+        ];
+  });
+
   const [activeSetup, setActiveSetup] = useState(0);
   const [mode, setMode] = useState("build");
+
+  useEffect(() => {
+    localStorage.setItem("wado_setups", JSON.stringify(setups));
+  }, [setups]);
 
   const updateSetup = (index, data) => {
     const updated = [...setups];
@@ -27,7 +38,7 @@ export default function App() {
 
   const savePresets = () => {
     localStorage.setItem("wado_setups", JSON.stringify(setups));
-    alert("✅ Presets saved.");
+    alert("💾 Presets saved.");
   };
 
   const loadPresets = () => {
@@ -41,15 +52,20 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans">
-      {/* Header */}
-      <header className="sticky top-0 z-50 px-6 py-4 border-b border-zinc-700 bg-zinc-900 shadow-md flex justify-between items-center">
-        <h1 className="text-2xl font-bold tracking-tight text-blue-400">
+    <div className="min-h-screen bg-zinc-900 text-white font-inter">
+      {/* Top Bar */}
+      <header className="sticky top-0 z-50 bg-zinc-950 border-b border-zinc-800 shadow px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+        <h1 className="text-xl md:text-2xl font-bold tracking-wide text-blue-400">
           ⚔️ WadoCalc Tao
         </h1>
-        <div className="flex gap-2">
-          <Button onClick={savePresets} variant="outline">💾 Save</Button>
-          <Button onClick={loadPresets} variant="outline">📂 Load</Button>
+
+        <div className="flex items-center flex-wrap gap-2">
+          <Button onClick={savePresets} variant="outline">
+            💾 Save
+          </Button>
+          <Button onClick={loadPresets} variant="outline">
+            📂 Load
+          </Button>
           <Button
             variant={mode === "build" ? "default" : "outline"}
             onClick={() => setMode("build")}
@@ -65,8 +81,42 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main */}
-      <main className="px-4 py-6 max-w-screen-2xl mx-auto">
+      {/* Setup Switcher + Selector */}
+      <div className="px-4 py-2 border-b border-zinc-800 bg-zinc-950 flex flex-wrap gap-4 items-center justify-between">
+        {mode === "build" && (
+          <SetupSelector
+            setups={setups}
+            activeIndex={activeSetup}
+            onSelect={(index) => setActiveSetup(index)}
+            onNew={() => {
+              const next = setups.length + 1;
+              const newSetup = {
+                id: Date.now(),
+                name: `Setup ${next}`,
+                runes: [],
+                classes: [],
+              };
+              setSetups([...setups, newSetup]);
+              setActiveSetup(setups.length);
+            }}
+            onRename={(index, newName) => {
+              const updated = [...setups];
+              updated[index].name = newName;
+              setSetups(updated);
+            }}
+            onDelete={(index) => {
+              const updated = setups.filter((_, i) => i !== index);
+              setSetups(updated);
+              setActiveSetup((prev) =>
+                index === prev ? 0 : index < prev ? prev - 1 : prev
+              );
+            }}
+          />
+        )}
+      </div>
+
+      {/* Main Content */}
+      <main className="p-4 md:p-6">
         {mode === "build" ? (
           <SetupBuilder
             setup={setups[activeSetup]}
@@ -80,21 +130,6 @@ export default function App() {
           <CompareView setups={setups} />
         )}
       </main>
-
-      {/* Footer - Setup Switcher */}
-      {mode === "build" && (
-        <footer className="fixed bottom-0 left-0 right-0 bg-zinc-950 border-t border-zinc-800 px-4 py-2 flex justify-center gap-3">
-          {setups.map((setup, index) => (
-            <Button
-              key={setup.id}
-              variant={activeSetup === index ? "default" : "outline"}
-              onClick={() => setActiveSetup(index)}
-            >
-              {setup.name}
-            </Button>
-          ))}
-        </footer>
-      )}
     </div>
   );
 }

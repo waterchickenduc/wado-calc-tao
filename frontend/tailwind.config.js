@@ -1,21 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        code: ['Fira Code', 'monospace']
+        mono: ['Fira Code', 'monospace'],
       },
       colors: {
-        dark: '#0f172a',
-        primary: '#3b82f6',
-        secondary: '#475569'
-      }
-    }
+        brand: {
+          DEFAULT: "#8b5cf6",  // Your purple brand
+          light: "#c4b5fd",
+          dark: "#7c3aed",
+        },
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
