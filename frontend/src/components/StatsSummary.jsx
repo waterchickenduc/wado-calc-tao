@@ -1,33 +1,34 @@
 import React from "react";
 import statOrder from "../lib/statOrder";
 
-export default function StatsSummary({ stats = {}, classStats = {} }) {
+export default function StatsSummary({ runeStats, classStats }) {
+  const allStats = [...new Set([...Object.keys(runeStats || {}), ...Object.keys(classStats || {})])];
+
   const displayStats = statOrder
+    .filter((stat) => allStats.includes(stat))
     .map((stat) => ({
       name: stat,
-      fromRunes: stats[stat] ?? 0,
-      fromClasses: classStats[stat] ?? 0,
+      rune: runeStats?.[stat] || 0,
+      class: classStats?.[stat] || 0,
     }))
-    .filter(({ fromRunes, fromClasses }) => fromRunes !== 0 || fromClasses !== 0);
-
-  if (displayStats.length === 0) return null;
+    .filter(({ rune, class: cls }) => rune !== 0 || cls !== 0);
 
   return (
     <div className="bg-zinc-900 border border-zinc-700 p-4 rounded w-full md:max-w-xs">
       <h3 className="text-white font-semibold mb-4 text-lg">📊 Stats Summary</h3>
-      <div className="grid grid-cols-4 text-sm gap-y-2">
-        <span className="col-span-1 font-semibold text-white/70">Stat</span>
-        <span className="text-right font-semibold text-white/70">Runes</span>
-        <span className="text-right font-semibold text-white/70">Classes</span>
-        <span className="text-right font-semibold text-white/70">Total</span>
+      <div className="grid grid-cols-4 text-sm gap-y-2 text-white/90">
+        <span className="col-span-1 font-semibold">Stat</span>
+        <span className="text-right font-semibold">Runes</span>
+        <span className="text-right font-semibold">Classes</span>
+        <span className="text-right font-semibold">Total</span>
 
-        {displayStats.map(({ name, fromRunes, fromClasses }) => (
+        {displayStats.map(({ name, rune, class: cls }) => (
           <React.Fragment key={name}>
-            <span className="truncate text-white/80">{name}</span>
-            <span className="text-right text-blue-300">{fromRunes.toFixed(2)}%</span>
-            <span className="text-right text-green-300">{fromClasses.toFixed(2)}%</span>
-            <span className="text-right text-white font-bold">
-              {(fromRunes + fromClasses).toFixed(2)}%
+            <span className="truncate">{name}</span>
+            <span className="text-right">{rune.toFixed(2)}%</span>
+            <span className="text-right">{cls.toFixed(2)}%</span>
+            <span className="text-right font-semibold">
+              {(rune + cls).toFixed(2)}%
             </span>
           </React.Fragment>
         ))}

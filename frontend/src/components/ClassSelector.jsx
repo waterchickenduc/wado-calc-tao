@@ -49,10 +49,16 @@ export default function ClassSelector({ setup, updateSetup }) {
   return (
     <div className="space-y-4">
       <div className="flex gap-2">
-        <button onClick={handleSelectAll} className="px-4 py-1 rounded bg-green-600 text-white text-sm">
+        <button
+          onClick={handleSelectAll}
+          className="px-4 py-1 rounded bg-green-600 text-white text-sm"
+        >
           Select All
         </button>
-        <button onClick={handleReset} className="px-4 py-1 rounded bg-red-600 text-white text-sm">
+        <button
+          onClick={handleReset}
+          className="px-4 py-1 rounded bg-red-600 text-white text-sm"
+        >
           Clear
         </button>
       </div>
@@ -66,7 +72,9 @@ export default function ClassSelector({ setup, updateSetup }) {
               branch.path.map((cls) => {
                 const isSelected = selected.find((c) => c.class === cls.class);
                 const stats = cls.stats || {};
-                const meaningfulStats = Object.entries(stats).filter(([_, val]) => val !== 0);
+                const meaningfulStats = Object.entries(stats).filter(
+                  ([_, val]) => val !== 0 && val !== "0"
+                );
 
                 return (
                   <button
@@ -75,18 +83,20 @@ export default function ClassSelector({ setup, updateSetup }) {
                     className={`w-full text-left p-4 rounded-md border transition-all shadow-sm
                       ${
                         isSelected
-                          ? "bg-blue-800 border-blue-400 text-white"
-                          : "bg-zinc-900 border-zinc-700 text-white hover:border-blue-500"
+                          ? "bg-blue-600 border-blue-400 text-white"
+                          : "bg-zinc-800 border-zinc-600 text-white hover:border-blue-500"
                       }`}
                   >
                     <div className="font-semibold text-lg mb-2">{cls.class}</div>
 
                     {meaningfulStats.length > 0 && (
-                      <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-4 text-white/80">
+                      <div className="text-sm text-white grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-4">
                         {meaningfulStats.map(([stat, value], i) => (
-                          <div key={i} className="flex justify-between">
+                          <div key={i} className="flex justify-between text-gray-300">
                             <span>{statLabels[stat] || stat}</span>
-                            <span className="font-medium">{value}%</span>
+                            <span className="text-white font-medium">
+                              {typeof value === "number" ? `${value}%` : value}
+                            </span>
                           </div>
                         ))}
                       </div>

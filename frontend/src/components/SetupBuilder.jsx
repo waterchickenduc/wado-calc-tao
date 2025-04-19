@@ -1,23 +1,27 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import runeData from "../data/runes.json";
 import statList from "../data/stat.json";
 import ClassSelector from "./ClassSelector";
 import StatsSummary from "./StatsSummary";
+import RuneCard from "./RuneCard";
+import InfoPopover from "./InfoPopover";
+import { evaluateLogicalSearch } from "../lib/evaluateLogicalSearch";
+
+const PAGE_SIZE = 12;
 
 export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }) {
   const [tab, setTab] = useState("runes");
-  const [filterText, setFilterText] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [page, setPage] = useState(1);
 
-  const selectedRunes = setup.runes || [];
-  const selectedClasses = setup.classes || [];
+  const selectedRunes = setup?.runes || [];
+  const selectedClasses = setup?.classes || [];
 
-  const groupedSelected = useMemo(() => {
-    return selectedRunes.reduce((acc, rune) => {
-      acc[rune.name] = acc[rune.name] || { ...rune, count: 0 };
-      acc[rune.name].count += 1;
-      return acc;
-    }, {});
-  }, [selectedRunes]);
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedSearch(searchText), 300);
+    return () => clearTimeout(handler);
+  }, [searchText]);
 
   const handleAddRune = (rune) => {
     if (selectedRunes.length >= 6) return;
@@ -35,15 +39,33 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   const handleClearRunes = () => updateSetup({ runes: [] });
 
+  const grouped = useMemo(() => {
+    return selectedRunes.reduce((acc, rune) => {
+      acc[rune.name] = acc[rune.name] || { ...rune, count: 0 };
+      acc[rune.name].count += 1;
+      return acc;
+    }, {});
+  }, [selectedRunes]);
+
+  const uniqueSelectedRunes = Object.values(grouped);
+
   const filteredRunes = useMemo(() => {
-    const query = filterText.toLowerCase();
-    return runeData.filter((rune) => {
-      const nameMatch = rune.name.toLowerCase().includes(query);
-      const stoneMatch = rune.runes?.some((r) => r.toLowerCase().includes(query));
-      const statMatch = rune.stats?.some((s) => s.Stat.toLowerCase().includes(query));
-      return nameMatch || stoneMatch || statMatch;
-    });
-  }, [filterText]);
+    try {
+      return runeData.filter((rune) =>
+        evaluateLogicalSearch(debouncedSearch, rune)
+      );
+    } catch (err) {
+      console.warn("❌ Invalid expression:", err.message);
+      return runeData;
+    }
+  }, [debouncedSearch]);
+
+  const paginatedRunes = useMemo(() => {
+    const start = (page - 1) * PAGE_SIZE;
+    return filteredRunes.slice(start, start + PAGE_SIZE);
+  }, [filteredRunes, page]);
+
+  const totalPages = Math.ceil(filteredRunes.length / PAGE_SIZE);
 
   const runeStats = useMemo(() => {
     const acc = {};
@@ -70,9 +92,8 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   return (
     <div className="flex flex-col md:flex-row gap-6 text-white">
-      {/* LEFT COLUMN */}
-      <div className="flex-1 space-y-6">
-        {/* Header */}
+      <div className="flex-1 space-y-4">
+        {/* Setup Header */}
         <div className="flex justify-between items-center">
           <input
             className="bg-zinc-800 text-white px-3 py-2 rounded w-full max-w-sm"
@@ -106,109 +127,85 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         {/* RUNE TAB */}
         {tab === "runes" && (
           <>
-            {/* Selected Runes */}
-            <div>
-              <h2 className="text-xl font-bold mb-2 text-blue-400">
-                Selected Runes ({selectedRunes.length}/6)
-              </h2>
-              {selectedRunes.length === 0 ? (
-                <p className="text-white/50 text-sm">No runes selected yet.</p>
-              ) : (
-                <>
-                  <button
-                    onClick={handleClearRunes}
-                    className="text-sm px-3 py-1 bg-red-600 text-white rounded hover:bg-red-500 mb-3"
-                  >
-                    ✖ Clear All
-                  </button>
-                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    {Object.values(groupedSelected).map((rune) => (
-                      <div
-                        key={rune.name}
-                        className="bg-zinc-900 p-4 rounded border border-zinc-700"
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <h3 className="font-semibold text-blue-300">{rune.name}</h3>
-                          <div className="text-sm bg-zinc-700 px-2 py-0.5 rounded-full">
-                            ×{rune.count}
-                          </div>
-                          <button
-                            onClick={() => handleRemoveRune(rune.name)}
-                            className="text-red-400 ml-3 hover:text-red-300"
-                          >
-                            ✕
-                          </button>
-                        </div>
-                        <div className="flex flex-wrap gap-1 text-xs text-white">
-                          {rune.runes?.map((r, i) => (
-                            <span key={i} className="bg-zinc-700 px-2 py-0.5 rounded">
-                              {r}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            {/* 🔍 Filters */}
-            <div className="grid md:grid-cols-2 gap-4 items-end mt-4">
-              <div className="flex flex-col gap-1">
-                <label className="text-sm text-white/70 font-semibold">
-                  Search Rune Name / Rune Stone / Stat
-                </label>
+            {/* Search */}
+            <div className="mt-4">
+              <label className="block text-white mb-1">Logical Rune Search</label>
+              <div className="flex items-center gap-2">
                 <input
                   type="text"
-                  placeholder="e.g. Caissor, Jara, Cr. Dmg"
-                  value={filterText}
-                  onChange={(e) => setFilterText(e.target.value)}
-                  className="bg-zinc-800 text-white px-3 py-2 rounded"
+                  placeholder="(cr. dmg AND jara) OR caissor"
+                  value={searchText}
+                  onChange={(e) => {
+                    setSearchText(e.target.value);
+                    setPage(1);
+                  }}
+                  className="px-3 py-2 rounded bg-zinc-800 text-white w-full"
                 />
+                <InfoPopover />
               </div>
+            </div>
+
+            {/* Selected Runes */}
+            <h2 className="mt-6 text-lg font-semibold text-blue-300">
+              Selected Runes ({selectedRunes.length}/6)
+            </h2>
+            {selectedRunes.length > 0 && (
+              <button
+                onClick={handleClearRunes}
+                className="text-sm px-3 py-1 bg-red-600 text-white rounded hover:bg-red-500"
+              >
+                ✖ Clear All
+              </button>
+            )}
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
+              {uniqueSelectedRunes.map((rune) => (
+                <RuneCard
+                  key={rune.name}
+                  rune={rune}
+                  count={rune.count}
+                  onRemove={() => handleRemoveRune(rune.name)}
+                />
+              ))}
             </div>
 
             {/* Rune Library */}
-            <div>
-              <h2 className="text-xl font-bold mb-3 text-blue-400">
-                Rune Library ({filteredRunes.length})
-              </h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-                {filteredRunes.map((rune) => (
-                  <div
-                    key={rune.name}
-                    className="bg-zinc-800 border border-zinc-700 p-4 rounded"
-                  >
-                    <h3 className="text-white font-semibold mb-1">{rune.name}</h3>
-                    <div className="flex flex-wrap gap-1 text-xs mb-2">
-                      {rune.runes.map((r, i) => (
-                        <span
-                          key={i}
-                          className="bg-zinc-700 text-white px-2 py-0.5 rounded"
-                        >
-                          {r}
-                        </span>
-                      ))}
-                    </div>
-                    <ul className="text-sm text-white/80 grid grid-cols-2 gap-x-4 gap-y-1 mb-2">
-                      {rune.stats.map(({ Stat, Value }, i) => (
-                        <li key={i}>
-                          {Stat}: <span className="font-medium">{Value}%</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <button
-                      onClick={() => handleAddRune(rune)}
-                      disabled={selectedRunes.length >= 6}
-                      className="mt-2 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-500 disabled:opacity-50"
-                    >
-                      ➕ Add Rune
-                    </button>
-                  </div>
-                ))}
-              </div>
+            <h2 className="text-lg font-semibold mt-8 text-blue-300">
+              Rune Library ({filteredRunes.length})
+            </h2>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-2">
+              {paginatedRunes.map((rune, index) => (
+                <RuneCard
+                  key={`${rune.name}-${index}`}
+                  rune={rune}
+                  onAdd={() => handleAddRune(rune)}
+                  isDisabled={selectedRunes.length >= 6}
+                />
+              ))}
             </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center gap-2 mt-4">
+                <button
+                  disabled={page <= 1}
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  className="bg-zinc-700 px-3 py-1 rounded text-white disabled:opacity-30"
+                >
+                  ◀ Prev
+                </button>
+                <span className="text-white/70 text-sm mt-1">
+                  Page {page} of {totalPages}
+                </span>
+                <button
+                  disabled={page >= totalPages}
+                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                  className="bg-zinc-700 px-3 py-1 rounded text-white disabled:opacity-30"
+                >
+                  Next ▶
+                </button>
+              </div>
+            )}
           </>
         )}
 
@@ -218,9 +215,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         )}
       </div>
 
-      {/* Sidebar */}
-      <div className="w-full md:w-[300px]">
-        <StatsSummary stats={runeStats} classStats={classStats} />
+      {/* Right Sidebar */}
+      <div className="w-full md:w-[300px] space-y-4">
+        <StatsSummary runeStats={runeStats} classStats={classStats} />
       </div>
     </div>
   );
