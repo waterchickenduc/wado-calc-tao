@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
+import Fuse from "fuse.js";
 import runeData from "../data/runes.json";
 import statList from "../data/stat.json";
 import ClassSelector from "./ClassSelector";
@@ -14,13 +15,38 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const [searchText, setSearchText] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [suggestions, setSuggestions] = useState([]);
+  const inputRef = useRef(null);
 
   const selectedRunes = setup?.runes || [];
   const selectedClasses = setup?.classes || [];
 
+  // All search terms (stats + rune names + rune stones)
+  const allTerms = useMemo(() => {
+    const runeNames = runeData.map((r) => r.name);
+    const runeStones = runeData.flatMap((r) => r.runes);
+    return Array.from(new Set([...statList, ...runeNames, ...runeStones]));
+  }, []);
+
+  const fuse = useMemo(() => new Fuse(allTerms, { threshold: 0.3 }), [allTerms]);
+
   useEffect(() => {
     const handler = setTimeout(() => setDebouncedSearch(searchText), 300);
     return () => clearTimeout(handler);
+  }, [searchText]);
+
+  useEffect(() => {
+    if (searchText.length < 2) {
+      setSuggestions([]);
+      return;
+    }
+    const lastTerm = searchText.split(/[\s()]+/).filter(Boolean).pop();
+    if (lastTerm?.length < 2) {
+      setSuggestions([]);
+      return;
+    }
+    const result = fuse.search(lastTerm).map((r) => r.item);
+    setSuggestions(result.slice(0, 5));
   }, [searchText]);
 
   const handleAddRune = (rune) => {
@@ -90,10 +116,19 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
     return acc;
   }, [selectedClasses]);
 
+  const insertSuggestion = (term) => {
+    const parts = searchText.trim().split(/\s+/);
+    parts.pop();
+    const updated = [...parts, term];
+    const newValue = updated.join(" ");
+    setSearchText(newValue + " ");
+    setSuggestions([]);
+    inputRef.current?.focus();
+  };
+
   return (
     <div className="flex flex-col md:flex-row gap-6 text-white">
       <div className="flex-1 space-y-4">
-        {/* Setup Header */}
         <div className="flex justify-between items-center">
           <input
             className="bg-zinc-800 text-white px-3 py-2 rounded w-full max-w-sm"
@@ -128,10 +163,11 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
         {tab === "runes" && (
           <>
             {/* Search */}
-            <div className="mt-4">
+            <div className="mt-4 relative">
               <label className="block text-white mb-1">Logical Rune Search</label>
               <div className="flex items-center gap-2">
                 <input
+                  ref={inputRef}
                   type="text"
                   placeholder="(cr. dmg AND jara) OR caissor"
                   value={searchText}
@@ -140,12 +176,31 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                     setPage(1);
                   }}
                   className="px-3 py-2 rounded bg-zinc-800 text-white w-full"
+                  onKeyDown={(e) => {
+                    if (suggestions.length > 0 && e.key === "Enter") {
+                      insertSuggestion(suggestions[0]);
+                      e.preventDefault();
+                    }
+                  }}
                 />
                 <InfoPopover />
               </div>
+              {suggestions.length > 0 && (
+                <div className="absolute z-50 bg-zinc-900 border border-zinc-700 rounded mt-1 w-full max-w-xl shadow-lg">
+                  {suggestions.map((s, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => insertSuggestion(s)}
+                      className="px-3 py-2 text-sm hover:bg-blue-800 cursor-pointer"
+                    >
+                      {s}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Selected Runes */}
+            {/* Selected runes */}
             <h2 className="mt-6 text-lg font-semibold text-blue-300">
               Selected Runes ({selectedRunes.length}/6)
             </h2>
@@ -209,13 +264,11 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </>
         )}
 
-        {/* CLASS TAB */}
         {tab === "classes" && (
           <ClassSelector setup={setup} updateSetup={updateSetup} />
         )}
       </div>
 
-      {/* Right Sidebar */}
       <div className="w-full md:w-[300px] space-y-4">
         <StatsSummary runeStats={runeStats} classStats={classStats} />
       </div>
