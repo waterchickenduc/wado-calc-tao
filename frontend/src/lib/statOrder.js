@@ -1,8 +1,5 @@
 export default [
   "Health",
-  "HP",
-  "HP Recovery",
-  "HP Recovery per Kill",
   "P. Atk",
   "P. Def",
   "M. Atk",
@@ -17,6 +14,7 @@ export default [
   "Cr. Dmg",
   "Skill CD",
   "Atk Delay",
-  "Movementspeed",
-  "Inventoryslots"
+  "HP Recovery per Kill",
+  "HP Recovery",
+  "Movementspeed"
 ];

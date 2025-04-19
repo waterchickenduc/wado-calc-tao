@@ -1,86 +1,41 @@
 import React from "react";
-import { evaluateExpression } from "../utils/evaluateExpression";
 
-const generateId = () => Math.random().toString(36).substr(2, 9);
-
-export default function FilterBar({
-  expression,
-  onExpressionChange,
-  statList,
-}) {
-  const addStat = (stat) => {
-    const updated = [
-      ...expression,
-      { id: generateId(), type: "stat", value: stat },
-    ];
-    onExpressionChange(updated);
-  };
-
-  const addOperator = (op) => {
-    const updated = [
-      ...expression,
-      { id: generateId(), type: "operator", value: op },
-    ];
-    onExpressionChange(updated);
-  };
-
-  const removeToken = (id) => {
-    onExpressionChange(expression.filter((token) => token.id !== id));
-  };
-
+export default function FilterBar({ filters, onAddFilter, onRemoveFilter, statList }) {
   return (
-    <div className="space-y-2">
-      <div className="flex gap-2">
-        <select
-          onChange={(e) => {
-            if (e.target.value) addStat(e.target.value);
-            e.target.selectedIndex = 0;
-          }}
-          className="px-2 py-1 rounded bg-zinc-700 text-white"
-        >
-          <option value="">➕ Add stat filter</option>
-          {statList.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-
-        <select
-          onChange={(e) => {
-            if (e.target.value) addOperator(e.target.value);
-            e.target.selectedIndex = 0;
-          }}
-          className="px-2 py-1 rounded bg-zinc-700 text-white"
-        >
-          <option value="">➕ Add operator</option>
-          <option value="AND">AND</option>
-          <option value="OR">OR</option>
-          <option value="(">(</option>
-          <option value=")">)</option>
-        </select>
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        {expression.map((token) => (
-          <div
-            key={token.id}
-            className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm shadow ${
-              token.type === "stat"
-                ? "bg-blue-600 text-white"
-                : "bg-purple-700 text-white"
-            }`}
-          >
-            {token.value}
-            <button
-              onClick={() => removeToken(token.id)}
-              className="text-xs hover:text-red-300"
-            >
-              ×
-            </button>
+    <div className="bg-zinc-900 border border-zinc-700 rounded p-4 space-y-3">
+      <div className="flex flex-wrap items-center gap-2">
+        {filters.map((stat, index) => (
+          <div key={index} className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-700 text-white text-sm">
+            {stat}
+            <button onClick={() => onRemoveFilter(stat)} className="hover:text-red-300 text-white text-sm">×</button>
           </div>
         ))}
+
+        <select
+          onChange={(e) => {
+            if (e.target.value) {
+              onAddFilter(e.target.value);
+              e.target.selectedIndex = 0;
+            }
+          }}
+          className="bg-zinc-800 text-white px-2 py-1 rounded"
+        >
+          <option value="">➕ Add Stat Filter</option>
+          {statList
+            .filter((s) => !filters.includes(s))
+            .map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+        </select>
       </div>
+
+      {filters.length > 0 && (
+        <div className="text-sm text-white/70 pt-2">
+          <strong>Filtering:</strong> {filters.join(" AND ")}
+        </div>
+      )}
     </div>
   );
 }
