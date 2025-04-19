@@ -3,7 +3,7 @@ import { Tooltip } from "react-tooltip";
 import { twMerge } from "tailwind-merge";
 
 export default function RuneCard({ rune, count = 0, onAdd, onRemove, isDisabled = false }) {
-  const hasAura = rune?.aura;
+  const hasAura = rune?.aura && rune?.aura !== "none";
 
   return (
     <div
@@ -42,7 +42,7 @@ export default function RuneCard({ rune, count = 0, onAdd, onRemove, isDisabled 
         )}
       </div>
 
-      {/* Runes / Stones */}
+      {/* Rune Stones */}
       <div className="flex flex-wrap gap-1 mb-2">
         {rune.runes?.map((r, i) => (
           <span
@@ -54,15 +54,15 @@ export default function RuneCard({ rune, count = 0, onAdd, onRemove, isDisabled 
         ))}
       </div>
 
-      {/* Aura */}
+      {/* Aura display */}
       {hasAura && (
         <div className="text-purple-400 text-xs mb-2">
-          ✨ Aura: <span className="font-medium">{rune.aura}</span>
-          {rune.auraChance ? ` (${rune.auraChance}%)` : null}
+          ✨ Aura: <span className="font-medium">{rune.aura}</span>{" "}
+          {rune.auraChance ? `(${rune.auraChance}%)` : ""}
         </div>
       )}
 
-      {/* Stats - 2 column grid */}
+      {/* Stats grid */}
       <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-white/90">
         {rune.stats
           .filter(({ Value }) => Value !== 0)
