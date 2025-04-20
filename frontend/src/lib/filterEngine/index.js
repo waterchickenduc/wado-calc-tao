@@ -1,4 +1,5 @@
 // src/lib/filterEngine/index.js
 
-export { evaluateLogicalSearch } from './evaluate.js';
-export { tokenize } from './tokenize.js';
+export * from './evaluate.js';
+export * from './tokenize.js';
+

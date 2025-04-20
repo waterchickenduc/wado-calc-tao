@@ -42,7 +42,10 @@ export function evaluateLogicalSearch(query, rune) {
     const auraMatch =
       typeof rune.aura === 'string' && normalize(rune.aura) === t;
 
-    return statMatch || runeStoneMatch || auraMatch;
+    const nameMatch =
+      typeof rune.name === 'string' && normalize(rune.name) === t;
+
+    return statMatch || runeStoneMatch || auraMatch || nameMatch;
   };
 
   for (let rawToken of tokens) {

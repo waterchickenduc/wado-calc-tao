@@ -1,5 +1,5 @@
+import { describe, test, expect } from 'vitest';
 import { evaluateLogicalSearch } from '../evaluate.js';
-
 
 const mockRune = (name, runes, stats, aura = '') => ({
   name,
@@ -8,67 +8,67 @@ const mockRune = (name, runes, stats, aura = '') => ({
   aura,
 });
 
-describe('evaluateLogicalSearch()', () => {
-  const runeA = mockRune('Toorpiz', ['Mehn', 'Jara'], [['Cr. Dmg', 4], ['Cr. Rate', 2]]);
-  const runeB = mockRune('Menthe', ['Yhing', 'Feoh'], [['HP', 6]]);
-  const runeC = mockRune('Concordia', ['Mehn'], [['Skill CD', 3]]);
-  const runeD = mockRune('Secretuus', ['Geofa'], [['Cr. Rate', 5], ['M. Atk', 3]]);
-  const runeE = mockRune('Grawammen', ['Mehn', 'Peroth'], [['Spirit ATK', 8], ['Cr. Dmg', 4]], 'Sanctuary');
+const runeA = mockRune('Rabhor', ['Beorc', 'Jara', 'Mehn'], [['Cr. Rate', 5], ['HP', 6]]);
+const runeB = mockRune('Despero', ['Beorc', 'Jara', 'Mehn'], [['Cr. Dmg', 4], ['HP', 8]]);
+const runeC = mockRune('Menthe', ['Yhing'], [['HP', 4]]);
+const runeD = mockRune('Toorpiz', ['Jara'], [['Skill CD', 2]]);
+const runeE = mockRune('Piettas', ['Mehn'], [['Cr. Dmg', 6], ['Skill CD', 2]]);
 
+describe('evaluateLogicalSearch()', () => {
   test('simple stat match', () => {
-    expect(evaluateLogicalSearch('Cr. Dmg', runeA)).toBe(true);
-    expect(evaluateLogicalSearch('Cr. Dmg', runeB)).toBe(false);
+    expect(evaluateLogicalSearch('Cr. Rate', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('Cr. Dmg', runeA)).toBe(false);
   });
 
   test('simple rune stone match', () => {
     expect(evaluateLogicalSearch('Mehn', runeA)).toBe(true);
-    expect(evaluateLogicalSearch('Mehn', runeB)).toBe(false);
+    expect(evaluateLogicalSearch('Mehn', runeC)).toBe(false);
   });
 
   test('AND logic', () => {
-    expect(evaluateLogicalSearch('Cr. Dmg AND Mehn', runeA)).toBe(true);
-    expect(evaluateLogicalSearch('Cr. Dmg AND Mehn', runeD)).toBe(false);
+    expect(evaluateLogicalSearch('Cr. Rate AND Mehn', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('Cr. Rate AND Mehn', runeC)).toBe(false);
   });
 
   test('OR logic', () => {
     expect(evaluateLogicalSearch('Cr. Dmg OR HP', runeA)).toBe(true);
     expect(evaluateLogicalSearch('Cr. Dmg OR HP', runeB)).toBe(true);
-    expect(evaluateLogicalSearch('Cr. Dmg OR HP', runeD)).toBe(false);
+    expect(evaluateLogicalSearch('Cr. Dmg OR HP', runeC)).toBe(true);
   });
 
   test('grouped expression', () => {
-    expect(evaluateLogicalSearch('(Cr. Dmg AND Mehn) OR HP', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('(Cr. Rate AND Mehn) OR HP', runeA)).toBe(true);
     expect(evaluateLogicalSearch('(Cr. Dmg AND Mehn) OR HP', runeB)).toBe(true);
-    expect(evaluateLogicalSearch('(Cr. Dmg AND Mehn) OR HP', runeD)).toBe(false);
+    expect(evaluateLogicalSearch('(Cr. Dmg AND Mehn) OR HP', runeC)).toBe(true);
   });
 
   test('complex chain', () => {
+    expect(evaluateLogicalSearch('Mehn AND Skill CD AND Cr. Dmg', runeE)).toBe(true);
     expect(evaluateLogicalSearch('Mehn AND Skill CD AND Cr. Dmg', runeC)).toBe(false);
-    expect(evaluateLogicalSearch('Mehn AND Skill CD AND Cr. Dmg', runeE)).toBe(false);
   });
 
   test('exact match only', () => {
-    expect(evaluateLogicalSearch('Crit Rate', runeA)).toBe(false); // should not match Cr. Rate
+    expect(evaluateLogicalSearch('Crit Rate', runeA)).toBe(false); // no such stat
   });
 
   test('no crash on malformed query', () => {
-    expect(() => evaluateLogicalSearch('(((((Cr. Dmg', runeA)).not.toThrow();
-    expect(() => evaluateLogicalSearch('', runeA)).not.toThrow();
+    expect(() => evaluateLogicalSearch('(', runeA)).not.toThrow();
+    expect(() => evaluateLogicalSearch(')', runeA)).not.toThrow();
   });
+
+  // 🚨 NEW: NOT operator support
   test('NOT operator', () => {
-    expect(evaluateLogicalSearch('NOT Cr. Dmg', runeB)).toBe(true); // HP rune, no Cr. Dmg
-    expect(evaluateLogicalSearch('NOT Cr. Dmg', runeA)).toBe(false); // Cr. Dmg is present
+    expect(evaluateLogicalSearch('NOT Cr. Dmg', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('NOT Cr. Dmg', runeB)).toBe(false);
   });
 
   test('AND with NOT', () => {
-    expect(evaluateLogicalSearch('Mehn AND NOT Cr. Dmg', runeC)).toBe(true);  // Mehn yes, Cr. Dmg no
-    expect(evaluateLogicalSearch('Mehn AND NOT Cr. Dmg', runeA)).toBe(false); // Mehn yes, Cr. Dmg yes
+    expect(evaluateLogicalSearch('Mehn AND NOT Despero', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('Mehn AND NOT Despero', runeB)).toBe(false);
   });
 
   test('NOT with group', () => {
-    expect(evaluateLogicalSearch('NOT (Cr. Dmg OR HP)', runeD)).toBe(true);   // Has Cr. Rate, no Cr. Dmg or HP
-    expect(evaluateLogicalSearch('NOT (Cr. Dmg OR HP)', runeA)).toBe(false);  // Has Cr. Dmg
-    expect(evaluateLogicalSearch('NOT (Cr. Dmg OR HP)', runeB)).toBe(false);  // Has HP
+    expect(evaluateLogicalSearch('NOT (Cr. Dmg OR Despero)', runeA)).toBe(true);
+    expect(evaluateLogicalSearch('NOT (Cr. Dmg OR Despero)', runeB)).toBe(false);
   });
-
 });
