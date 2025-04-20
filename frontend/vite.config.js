@@ -8,4 +8,9 @@ export default defineConfig({
     host: true, // Allow LAN access
     allowedHosts: ['d3mon.de'], // 👈 Add your domain here
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './vitest.setup.js',
+  },
 });

@@ -108,18 +108,32 @@ function convertStats() {
 }
 
 // ✅ RUNE AURA CONVERTER
+// ✅ RUNE AURA CONVERTER (🔥 patched for buildStatsSummary)
 function convertAuras() {
   const raw = JSON.parse(fs.readFileSync(`${rawDir}/rune_aura.json`, "utf-8"));
-  const cleaned = raw.map((r) => {
-    const out = {};
-    for (const [k, v] of Object.entries(r)) {
-      out[k.trim()] = typeof v === "string" ? v.trim() : cleanNumber(v);
-    }
-    return out;
-  });
+
+  const cleaned = raw.map((entry) => {
+    const name = entry["Aura"]?.trim();
+    if (!name) return null;
+
+    const stats = Object.entries(entry)
+      .filter(([k, v]) => k !== "Aura" && v !== "0%" && v !== "0" && v !== "")
+      .map(([Stat, Value]) => ({
+        Stat: Stat.trim(),
+        Value: cleanNumber(Value),
+      }));
+
+    return {
+      name,
+      trigger: 10, // default trigger chance unless you want to customize
+      stats,
+    };
+  }).filter(Boolean); // remove nulls
+
   fs.writeFileSync(`${outputDir}/runeAuras.json`, JSON.stringify(cleaned, null, 2));
-  console.log(`✅ Wrote ${cleaned.length} auras to runeAuras.json`);
+  console.log(`✅ Converted and saved ${cleaned.length} auras → runeAuras.json`);
 }
+
 
 // ✅ RUNE STONE CONVERTER
 function convertStones() {

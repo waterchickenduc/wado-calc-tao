@@ -3,10 +3,9 @@ import Fuse from "fuse.js";
 import runeData from "../data/runes.json";
 import statList from "../data/stat.json";
 import ClassSelector from "./ClassSelector";
-import StatsSummary from "./StatsSummary";
 import RuneCard from "./RuneCard";
 import InfoPopover from "./InfoPopover";
-import { evaluateLogicalSearch } from "../lib/filterEngine/evaluate.js";
+import { evaluateLogicalSearch } from "../lib/filterEngine/evaluate";
 
 const PAGE_SIZE = 12;
 
@@ -36,9 +35,15 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   }, [searchText]);
 
   useEffect(() => {
-    if (searchText.length < 2) return setSuggestions([]);
+    if (searchText.length < 2) {
+      setSuggestions([]);
+      return;
+    }
     const lastTerm = searchText.split(/[\s()]+/).filter(Boolean).pop();
-    if (!lastTerm || lastTerm.length < 2) return setSuggestions([]);
+    if (lastTerm?.length < 2) {
+      setSuggestions([]);
+      return;
+    }
     const result = fuse.search(lastTerm).map((r) => r.item);
     setSuggestions(result.slice(0, 5));
   }, [searchText]);
@@ -71,9 +76,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   const filteredRunes = useMemo(() => {
     try {
-      return runeData.filter((rune) =>
-        evaluateLogicalSearch(debouncedSearch, rune)
-      );
+      return runeData.filter((rune) => evaluateLogicalSearch(debouncedSearch, rune));
     } catch (err) {
       console.warn("❌ Invalid expression:", err.message);
       return runeData;
@@ -86,29 +89,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   }, [filteredRunes, page]);
 
   const totalPages = Math.ceil(filteredRunes.length / PAGE_SIZE);
-
-  const runeStats = useMemo(() => {
-    const acc = {};
-    selectedRunes.forEach((rune) => {
-      (rune.stats || []).forEach(({ Stat, Value }) => {
-        acc[Stat] = (acc[Stat] || 0) + Value;
-      });
-    });
-    return acc;
-  }, [selectedRunes]);
-
-  const classStats = useMemo(() => {
-    const acc = {};
-    selectedClasses.forEach((cls) => {
-      const list = Array.isArray(cls.stats)
-        ? cls.stats
-        : Object.entries(cls.stats || {}).map(([Stat, Value]) => ({ Stat, Value }));
-      list.forEach(({ Stat, Value }) => {
-        acc[Stat] = (acc[Stat] || 0) + Value;
-      });
-    });
-    return acc;
-  }, [selectedClasses]);
 
   const insertSuggestion = (term) => {
     const parts = searchText.trim().split(/\s+/);
@@ -153,10 +133,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </button>
         </div>
 
-        {/* RUNE TAB */}
+        {/* Rune Search */}
         {tab === "runes" && (
           <>
-            {/* Search */}
             <div className="mt-4 relative">
               <label className="block text-white mb-1">Logical Rune Search</label>
               <div className="flex items-center gap-2">
@@ -180,7 +159,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                 <InfoPopover />
               </div>
 
-              {/* Suggestions */}
               {suggestions.length > 0 && (
                 <div className="absolute z-50 bg-zinc-900 border border-zinc-700 rounded mt-1 w-full max-w-xl shadow-lg">
                   {suggestions.map((s, idx) => {
@@ -189,7 +167,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                     else if (runeData.some((r) => r.name === s)) type = "[rune]";
                     else if (runeData.some((r) => r.runes.includes(s))) type = "[runestone]";
                     else if (runeData.some((r) => (r.aura || "").toLowerCase() === s.toLowerCase())) type = "[aura]";
-
                     return (
                       <div
                         key={idx}
@@ -269,14 +246,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </>
         )}
 
-        {/* CLASS TAB */}
-        {tab === "classes" && (
-          <ClassSelector setup={setup} updateSetup={updateSetup} />
-        )}
-      </div>
-
-      <div className="w-full md:w-[300px] space-y-4">
-        <StatsSummary runeStats={runeStats} classStats={classStats} runes={selectedRunes} />
+        {tab === "classes" && <ClassSelector setup={setup} updateSetup={updateSetup} />}
       </div>
     </div>
   );
