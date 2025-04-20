@@ -21,7 +21,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const selectedRunes = setup?.runes || [];
   const selectedClasses = setup?.classes || [];
 
-  // All search terms (stats + rune names + rune stones + auras)
   const allTerms = useMemo(() => {
     const runeNames = runeData.map((r) => r.name);
     const runeStones = runeData.flatMap((r) => r.runes);
@@ -37,15 +36,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   }, [searchText]);
 
   useEffect(() => {
-    if (searchText.length < 2) {
-      setSuggestions([]);
-      return;
-    }
+    if (searchText.length < 2) return setSuggestions([]);
     const lastTerm = searchText.split(/[\s()]+/).filter(Boolean).pop();
-    if (lastTerm?.length < 2) {
-      setSuggestions([]);
-      return;
-    }
+    if (!lastTerm || lastTerm.length < 2) return setSuggestions([]);
     const result = fuse.search(lastTerm).map((r) => r.item);
     setSuggestions(result.slice(0, 5));
   }, [searchText]);
@@ -97,7 +90,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const runeStats = useMemo(() => {
     const acc = {};
     selectedRunes.forEach((rune) => {
-      rune.stats.forEach(({ Stat, Value }) => {
+      (rune.stats || []).forEach(({ Stat, Value }) => {
         acc[Stat] = (acc[Stat] || 0) + Value;
       });
     });
@@ -187,7 +180,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                 <InfoPopover />
               </div>
 
-              {/* 🔽 Suggestions Dropdown */}
+              {/* Suggestions */}
               {suggestions.length > 0 && (
                 <div className="absolute z-50 bg-zinc-900 border border-zinc-700 rounded mt-1 w-full max-w-xl shadow-lg">
                   {suggestions.map((s, idx) => {
@@ -283,7 +276,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
       </div>
 
       <div className="w-full md:w-[300px] space-y-4">
-        <StatsSummary runeStats={runeStats} classStats={classStats} />
+        <StatsSummary runeStats={runeStats} classStats={classStats} runes={selectedRunes} />
       </div>
     </div>
   );
