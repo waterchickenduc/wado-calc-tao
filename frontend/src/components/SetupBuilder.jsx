@@ -3,10 +3,9 @@ import Fuse from "fuse.js";
 import runeData from "../data/runes.json";
 import statList from "../data/stat.json";
 import ClassSelector from "./ClassSelector";
-import StatsSummary from "./StatsSummary";
 import RuneCard from "./RuneCard";
 import InfoPopover from "./InfoPopover";
-import { evaluateLogicalSearch } from "../lib/evaluateLogicalSearch";
+import { evaluateLogicalSearch } from "../lib/filterEngine/evaluate";
 
 const PAGE_SIZE = 12;
 
@@ -21,11 +20,11 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   const selectedRunes = setup?.runes || [];
   const selectedClasses = setup?.classes || [];
 
-  // All search terms (stats + rune names + rune stones)
   const allTerms = useMemo(() => {
     const runeNames = runeData.map((r) => r.name);
     const runeStones = runeData.flatMap((r) => r.runes);
-    return Array.from(new Set([...statList, ...runeNames, ...runeStones]));
+    const auras = runeData.map((r) => r.aura).filter(Boolean);
+    return Array.from(new Set([...statList, ...runeNames, ...runeStones, ...auras]));
   }, []);
 
   const fuse = useMemo(() => new Fuse(allTerms, { threshold: 0.3 }), [allTerms]);
@@ -77,9 +76,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
 
   const filteredRunes = useMemo(() => {
     try {
-      return runeData.filter((rune) =>
-        evaluateLogicalSearch(debouncedSearch, rune)
-      );
+      return runeData.filter((rune) => evaluateLogicalSearch(debouncedSearch, rune));
     } catch (err) {
       console.warn("❌ Invalid expression:", err.message);
       return runeData;
@@ -92,29 +89,6 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
   }, [filteredRunes, page]);
 
   const totalPages = Math.ceil(filteredRunes.length / PAGE_SIZE);
-
-  const runeStats = useMemo(() => {
-    const acc = {};
-    selectedRunes.forEach((rune) => {
-      rune.stats.forEach(({ Stat, Value }) => {
-        acc[Stat] = (acc[Stat] || 0) + Value;
-      });
-    });
-    return acc;
-  }, [selectedRunes]);
-
-  const classStats = useMemo(() => {
-    const acc = {};
-    selectedClasses.forEach((cls) => {
-      const list = Array.isArray(cls.stats)
-        ? cls.stats
-        : Object.entries(cls.stats || {}).map(([Stat, Value]) => ({ Stat, Value }));
-      list.forEach(({ Stat, Value }) => {
-        acc[Stat] = (acc[Stat] || 0) + Value;
-      });
-    });
-    return acc;
-  }, [selectedClasses]);
 
   const insertSuggestion = (term) => {
     const parts = searchText.trim().split(/\s+/);
@@ -159,10 +133,9 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </button>
         </div>
 
-        {/* RUNE TAB */}
+        {/* Rune Search */}
         {tab === "runes" && (
           <>
-            {/* Search */}
             <div className="mt-4 relative">
               <label className="block text-white mb-1">Logical Rune Search</label>
               <div className="flex items-center gap-2">
@@ -185,22 +158,31 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
                 />
                 <InfoPopover />
               </div>
+
               {suggestions.length > 0 && (
                 <div className="absolute z-50 bg-zinc-900 border border-zinc-700 rounded mt-1 w-full max-w-xl shadow-lg">
-                  {suggestions.map((s, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => insertSuggestion(s)}
-                      className="px-3 py-2 text-sm hover:bg-blue-800 cursor-pointer"
-                    >
-                      {s}
-                    </div>
-                  ))}
+                  {suggestions.map((s, idx) => {
+                    let type = "[other]";
+                    if (statList.includes(s)) type = "[stat]";
+                    else if (runeData.some((r) => r.name === s)) type = "[rune]";
+                    else if (runeData.some((r) => r.runes.includes(s))) type = "[runestone]";
+                    else if (runeData.some((r) => (r.aura || "").toLowerCase() === s.toLowerCase())) type = "[aura]";
+                    return (
+                      <div
+                        key={idx}
+                        onClick={() => insertSuggestion(s)}
+                        className="px-3 py-2 text-sm hover:bg-blue-800 cursor-pointer flex justify-between"
+                      >
+                        <span>{s}</span>
+                        <span className="text-xs text-gray-400 ml-2">{type}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
 
-            {/* Selected runes */}
+            {/* Selected Runes */}
             <h2 className="mt-6 text-lg font-semibold text-blue-300">
               Selected Runes ({selectedRunes.length}/6)
             </h2>
@@ -264,13 +246,7 @@ export default function SetupBuilder({ setup, updateSetup, resetSetup, setName }
           </>
         )}
 
-        {tab === "classes" && (
-          <ClassSelector setup={setup} updateSetup={updateSetup} />
-        )}
-      </div>
-
-      <div className="w-full md:w-[300px] space-y-4">
-        <StatsSummary runeStats={runeStats} classStats={classStats} />
+        {tab === "classes" && <ClassSelector setup={setup} updateSetup={updateSetup} />}
       </div>
     </div>
   );

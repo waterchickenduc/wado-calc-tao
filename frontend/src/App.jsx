@@ -3,6 +3,8 @@ import SetupBuilder from "./components/SetupBuilder";
 import CompareView from "./components/CompareView";
 import SetupSelector from "./components/ui/SetupSelector";
 import Button from "./components/ui/Button";
+import StatsSummary from "./components/StatsSummary";
+import { buildStatsSummary } from "./lib/statHelpers";
 import "./index.css";
 
 export default function App() {
@@ -54,6 +56,12 @@ export default function App() {
     }
   };
 
+  const currentSetup = setups[activeSetup];
+  const { totalStats, runeStats, auraStats, classStats } = buildStatsSummary(
+    currentSetup.runes,
+    currentSetup.classes || {}
+  );
+
   return (
     <div className="min-h-screen bg-wado-bg text-white font-inter">
       {/* Header */}
@@ -63,8 +71,12 @@ export default function App() {
         </h1>
 
         <div className="flex items-center flex-wrap gap-2">
-          <Button onClick={savePresets} variant="outline">💾 Save</Button>
-          <Button onClick={loadPresets} variant="outline">📂 Load</Button>
+          <Button onClick={savePresets} variant="outline">
+            💾 Save
+          </Button>
+          <Button onClick={loadPresets} variant="outline">
+            📂 Load
+          </Button>
           <Button
             variant={mode === "build" ? "default" : "outline"}
             onClick={() => setMode("build")}
@@ -117,16 +129,29 @@ export default function App() {
       {/* Main Panel */}
       <main className="p-4 md:p-6">
         {mode === "build" ? (
-          <SetupBuilder
-            setup={setups[activeSetup]}
-            updateSetup={(data) => updateSetup(activeSetup, data)}
-            resetSetup={() => resetSetup(activeSetup)}
-            setName={(name) =>
-              updateSetup(activeSetup, {
-                name: name || `Setup ${activeSetup + 1}`,
-              })
-            }
-          />
+          <div className="flex flex-col lg:flex-row gap-6">
+            <div className="flex-1">
+              <SetupBuilder
+                setup={currentSetup}
+                updateSetup={(data) => updateSetup(activeSetup, data)}
+                resetSetup={() => resetSetup(activeSetup)}
+                setName={(name) =>
+                  updateSetup(activeSetup, {
+                    name: name || `Setup ${activeSetup + 1}`,
+                  })
+                }
+              />
+            </div>
+            <div className="w-full md:max-w-xs">
+              <StatsSummary
+                totalStats={totalStats}
+                runeStats={runeStats}
+                auraStats={auraStats}
+                classStats={classStats}
+                runes={currentSetup.runes}
+              />
+            </div>
+          </div>
         ) : (
           <CompareView setups={setups} />
         )}
