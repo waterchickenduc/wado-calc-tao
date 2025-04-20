@@ -6,7 +6,8 @@ import ClassSelector from "./ClassSelector";
 import StatsSummary from "./StatsSummary";
 import RuneCard from "./RuneCard";
 import InfoPopover from "./InfoPopover";
-import { evaluateLogicalSearch } from "../lib/evaluateLogicalSearch";
+import { evaluateLogicalSearch } from '../lib/filterEngine';
+
 
 const PAGE_SIZE = 12;
 
