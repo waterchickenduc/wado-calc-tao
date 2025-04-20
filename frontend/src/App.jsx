@@ -148,6 +148,7 @@ export default function App() {
                 runeStats={runeStats}
                 auraStats={auraStats}
                 classStats={classStats}
+                runes={currentSetup.runes}
               />
             </div>
           </div>
