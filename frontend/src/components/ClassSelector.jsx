@@ -5,7 +5,6 @@ import StatsSummary from "./StatsSummary";
 export default function ClassSelector({ setup, updateSetup }) {
   const selectedClasses = setup.classes || [];
 
-  // 🔍 Extract all classes from data
   const allClasses = useMemo(() => {
     const root = classData["Adventurer"];
     if (!root || !Array.isArray(root.paths)) return [];
@@ -18,23 +17,6 @@ export default function ClassSelector({ setup, updateSetup }) {
     );
   }, []);
 
-  // ✅ Selected class objects
-  const selectedClassObjects = allClasses.filter(cls =>
-    selectedClasses.includes(cls.name)
-  );
-
-  // ➕ Add all classes
-  const handleAddAll = () => {
-    const all = allClasses.map((cls) => cls.name);
-    updateSetup({ classes: all });
-  };
-
-  // ❌ Clear all classes
-  const handleClearAll = () => {
-    updateSetup({ classes: [] });
-  };
-
-  // 🔁 Toggle class selection
   const handleToggleClass = (className) => {
     const updated = selectedClasses.includes(className)
       ? selectedClasses.filter((c) => c !== className)
@@ -43,29 +25,28 @@ export default function ClassSelector({ setup, updateSetup }) {
     updateSetup({ classes: updated });
   };
 
-  // 📊 Total class stats computation
-  const classStats = useMemo(() => {
-    const totals = {};
-    selectedClassObjects.forEach(cls => {
-      Object.entries(cls.stats).forEach(([key, val]) => {
-        if (!totals[key]) totals[key] = 0;
-        totals[key] += val;
-      });
-    });
-    return totals;
-  }, [selectedClassObjects]);
+  const handleAddAll = () => {
+    const all = allClasses.map((cls) => cls.name);
+    updateSetup({ classes: all });
+  };
+
+  const handleClearAll = () => {
+    updateSetup({ classes: [] });
+  };
 
   const stats = {
-    totalStats: classStats,
-    classStats: classStats,
+    totalStats: {},
+    classStats: {},
     auraStats: {},
     runeStats: {},
     runes: [],
   };
 
+  const selectedClassObjects = allClasses.filter(cls => selectedClasses.includes(cls.name));
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr_1fr] gap-6 items-start">
-      {/* 📚 Column 1: All Classes */}
+      {/* Column 1: All Classes */}
       <div>
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold text-blue-300">
@@ -78,17 +59,17 @@ export default function ClassSelector({ setup, updateSetup }) {
             + Add all classes
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+        <div className="flex flex-col gap-2">
           {allClasses.map((cls) => (
             <div
               key={cls.name}
               onClick={() => handleToggleClass(cls.name)}
-              className={`cursor-pointer p-4 border border-zinc-700 rounded bg-zinc-800 hover:bg-blue-800 transition-all shadow ${
+              className={`cursor-pointer px-4 py-2 rounded bg-zinc-800 hover:bg-blue-800 transition-all ${
                 selectedClasses.includes(cls.name) ? "bg-blue-700" : ""
               }`}
             >
-              <div className="font-medium text-lg">{cls.name}</div>
-              <div className="text-xs text-white/60 grid grid-cols-2 gap-x-4 mt-2">
+              <div className="font-medium">{cls.name}</div>
+              <div className="text-xs text-white/60 grid grid-cols-2 gap-x-4 mt-1">
                 {Object.entries(cls.stats)
                   .filter(([_, val]) => val !== 0)
                   .map(([key, val], idx) => (
@@ -102,7 +83,7 @@ export default function ClassSelector({ setup, updateSetup }) {
         </div>
       </div>
 
-      {/* 🧾 Column 2: Selected Classes */}
+      {/* Column 2: Selected Class Cards */}
       <div>
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold text-blue-300">
@@ -119,9 +100,9 @@ export default function ClassSelector({ setup, updateSetup }) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
           {selectedClassObjects.map((cls) => (
-            <div
+            <div //hier
               key={cls.name}
-              className="relative border border-zinc-700 p-4 rounded bg-zinc-800 shadow"
+              className="relative border border-zinc-700 p-4 rounded-md bg-zinc-800 shadow"
             >
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-blue-400 text-lg">{cls.name}</h3>
@@ -142,12 +123,12 @@ export default function ClassSelector({ setup, updateSetup }) {
                     </div>
                   ))}
               </div>
-            </div>
+            </div> //hier
           ))}
         </div>
       </div>
 
-      {/* 📊 Column 3: Stats Summary */}
+      {/* Column 3: Stats Summary */}
       <div className="w-full">
         <StatsSummary
           totalStats={stats.totalStats}
