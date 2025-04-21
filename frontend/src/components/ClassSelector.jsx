@@ -1,113 +1,144 @@
-import React from "react";
-import data from "../data/adventureClasses.json";
-
-const statLabels = {
-  health: "HP",
-  p_atk: "P. Atk",
-  p_def: "P. Def",
-  m_atk: "M. Atk",
-  m_def: "M. Def",
-  ele_atk: "Ele. Atk",
-  ele_def: "Ele. Def",
-  spirit_atk: "Spirit ATK",
-  increase_str: "Increase STR",
-  increase_agi: "Increase AGI",
-  increase_int: "Increase INT",
-  cr_rate: "Cr. Rate",
-  cr_dmg: "Cr. Dmg",
-  skill_cd: "Skill CD",
-  atk_delay: "Atk Delay",
-  hp_recovery_per_kill: "HP Recovery / Kill",
-  hp_recovery: "HP Recovery",
-  movementspeed: "Movementspeed",
-  inventoryslots: "Inventoryslots",
-};
+import React, { useMemo } from "react";
+import classData from "../data/adventureClasses.json";
+import StatsSummary from "./StatsSummary";
 
 export default function ClassSelector({ setup, updateSetup }) {
-  const selected = setup.classes || [];
+  const selectedClasses = setup.classes || [];
 
-  const toggleClass = (cls) => {
-    const isSelected = selected.find((c) => c.class === cls.class);
-    const updated = isSelected
-      ? selected.filter((c) => c.class !== cls.class)
-      : [...selected, cls];
+  const allClasses = useMemo(() => {
+    const root = classData["Adventurer"];
+    if (!root || !Array.isArray(root.paths)) return [];
+
+    return root.paths.flatMap(branch =>
+      branch.path.map(cls => ({
+        name: cls.class,
+        stats: cls.stats,
+      }))
+    );
+  }, []);
+
+  const handleToggleClass = (className) => {
+    const updated = selectedClasses.includes(className)
+      ? selectedClasses.filter((c) => c !== className)
+      : [...selectedClasses, className];
+
     updateSetup({ classes: updated });
   };
 
-  const handleSelectAll = () => {
-    const all = [];
-    for (const group of Object.values(data)) {
-      for (const path of group.paths) {
-        all.push(...path.path);
-      }
-    }
+  const handleAddAll = () => {
+    const all = allClasses.map((cls) => cls.name);
     updateSetup({ classes: all });
   };
 
-  const handleReset = () => updateSetup({ classes: [] });
+  const handleClearAll = () => {
+    updateSetup({ classes: [] });
+  };
+
+  const stats = {
+    totalStats: {},
+    classStats: {},
+    auraStats: {},
+    runeStats: {},
+    runes: [],
+  };
+
+  const selectedClassObjects = allClasses.filter(cls => selectedClasses.includes(cls.name));
 
   return (
-    <div className="space-y-4">
-      <div className="flex gap-2">
-        <button
-          onClick={handleSelectAll}
-          className="px-4 py-1 rounded bg-green-600 text-white text-sm"
-        >
-          Select All
-        </button>
-        <button
-          onClick={handleReset}
-          className="px-4 py-1 rounded bg-red-600 text-white text-sm"
-        >
-          Clear
-        </button>
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr_1fr] gap-6 items-start">
+      {/* Column 1: All Classes */}
+      <div>
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-lg font-semibold text-blue-300">
+            All Classes
+          </h2>
+          <button
+            onClick={handleAddAll}
+            className="text-sm text-blue-400 border border-blue-400 px-2 py-1 rounded hover:bg-blue-600 hover:text-white transition-all"
+          >
+            + Add all classes
+          </button>
+        </div>
+        <div className="flex flex-col gap-2">
+          {allClasses.map((cls) => (
+            <div
+              key={cls.name}
+              onClick={() => handleToggleClass(cls.name)}
+              className={`cursor-pointer px-4 py-2 rounded bg-zinc-800 hover:bg-blue-800 transition-all ${
+                selectedClasses.includes(cls.name) ? "bg-blue-700" : ""
+              }`}
+            >
+              <div className="font-medium">{cls.name}</div>
+              <div className="text-xs text-white/60 grid grid-cols-2 gap-x-4 mt-1">
+                {Object.entries(cls.stats)
+                  .filter(([_, val]) => val !== 0)
+                  .map(([key, val], idx) => (
+                    <div key={idx}>
+                      {key}: <span className="font-semibold">{val}%</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {Object.entries(data).map(([base, { paths }]) => (
-        <div key={base} className="mt-6">
-          <h4 className="font-semibold text-blue-400 mb-2">{base}</h4>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
-            {paths.flatMap((branch) =>
-              branch.path.map((cls) => {
-                const isSelected = selected.find((c) => c.class === cls.class);
-                const stats = cls.stats || {};
-                const meaningfulStats = Object.entries(stats).filter(
-                  ([_, val]) => val !== 0 && val !== "0"
-                );
-
-                return (
-                  <button
-                    key={cls.class}
-                    onClick={() => toggleClass(cls)}
-                    className={`w-full text-left p-4 rounded-md border transition-all shadow-sm
-                      ${
-                        isSelected
-                          ? "bg-blue-600 border-blue-400 text-white"
-                          : "bg-zinc-800 border-zinc-600 text-white hover:border-blue-500"
-                      }`}
-                  >
-                    <div className="font-semibold text-lg mb-2">{cls.class}</div>
-
-                    {meaningfulStats.length > 0 && (
-                      <div className="text-sm text-white grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-4">
-                        {meaningfulStats.map(([stat, value], i) => (
-                          <div key={i} className="flex justify-between text-gray-300">
-                            <span>{statLabels[stat] || stat}</span>
-                            <span className="text-white font-medium">
-                              {typeof value === "number" ? `${value}%` : value}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </button>
-                );
-              })
-            )}
-          </div>
+      {/* Column 2: Selected Class Cards */}
+      <div>
+        <div className="flex justify-between items-center mb-2">
+          <h2 className="text-lg font-semibold text-blue-300">
+            Selected Classes ({selectedClasses.length})
+          </h2>
+          {selectedClasses.length > 0 && (
+            <button
+              onClick={handleClearAll}
+              className="text-sm text-red-400 border border-red-500 px-2 py-1 rounded hover:bg-red-600 hover:text-white transition-all"
+            >
+              ✖ Clear all classes
+            </button>
+          )}
         </div>
-      ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+          {selectedClassObjects.map((cls) => (
+            <div
+              key={cls.name}
+              className="relative border border-zinc-700 p-4 rounded bg-zinc-800 shadow min-h-[100px] flex flex-col justify-between"
+            >
+              <div className="flex justify-between items-center">
+                <h3 className="font-semibold text-blue-400 text-lg">{cls.name}</h3>
+                <button
+                  onClick={() => handleToggleClass(cls.name)}
+                  className="text-zinc-500 hover:text-red-500 text-lg"
+                  title="Remove class"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1 text-white/90 mt-2">
+                {Object.entries(cls.stats)
+                  .filter(([_, val]) => val !== 0)
+                  .map(([key, val], idx) => (
+                    <div key={idx}>
+                      {key}: <span className="font-semibold">{val}%</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+          ))}
+        </div>
+      </div>
+
+      {/* Column 3: Stats Summary */}
+      <div className="w-full">
+        <StatsSummary
+          totalStats={stats.totalStats}
+          runeStats={stats.runeStats}
+          auraStats={stats.auraStats}
+          classStats={stats.classStats}
+          runes={stats.runes}
+        />
+      </div>
     </div>
   );
 }

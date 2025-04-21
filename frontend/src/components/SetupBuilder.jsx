@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import ClassSelector from "./ClassSelector";
 import RuneCard from "./RuneCard";
 import StatsSummary from "./StatsSummary";
+import BuilderLayout from "./ui/BuilderLayout"; // 🆕 Import layout wrapper
 
 const PAGE_SIZE = 5;
 
@@ -13,7 +14,7 @@ export default function SetupBuilder({
   tab,
   setTab,
   stats,
-  filteredRunes = [], // 💡 receives pre-filtered list from App
+  filteredRunes = [],
 }) {
   const [page, setPage] = useState(1);
   const selectedRunes = setup?.runes || [];
@@ -56,10 +57,9 @@ export default function SetupBuilder({
   }
 
   return (
-    <div className="relative">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr_1fr] gap-6 items-start">
-        {/* Column 1: Rune Library */}
-        <div>
+    <BuilderLayout
+      left={
+        <>
           <h2 className="text-lg font-semibold text-blue-300 mb-2">
             Rune Library ({filteredRunes.length})
           </h2>
@@ -94,10 +94,10 @@ export default function SetupBuilder({
               </button>
             </div>
           )}
-        </div>
-
-        {/* Column 2: Selected Runes */}
-        <div>
+        </>
+      }
+      middle={
+        <>
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-lg font-semibold text-blue-300">
               Selected Runes ({selectedRunes.length}/6)
@@ -121,19 +121,17 @@ export default function SetupBuilder({
               />
             ))}
           </div>
-        </div>
-
-        {/* Column 3: Stats Summary */}
-        <div className="w-full">
-          <StatsSummary
-            totalStats={stats.totalStats}
-            runeStats={stats.runeStats}
-            auraStats={stats.auraStats}
-            classStats={stats.classStats}
-            runes={stats.runes}
-          />
-        </div>
-      </div>
-    </div>
+        </>
+      }
+      right={
+        <StatsSummary
+          totalStats={stats.totalStats}
+          runeStats={stats.runeStats}
+          auraStats={stats.auraStats}
+          classStats={stats.classStats}
+          runes={stats.runes}
+        />
+      }
+    />
   );
 }
