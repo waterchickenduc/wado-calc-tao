@@ -1,11 +1,12 @@
 import React from "react";
 
 function formatValue(value) {
-  return `${value.toFixed(2)}%`;
+  const val = Number(value);
+  return isNaN(val) ? "0%" : `${val.toFixed(2)}%`;
 }
 
-function StatBlock({ title, stats, color = "text-white", subTitle = null }) {
-  const keys = Object.keys(stats);
+function StatBlock({ title, stats = {}, color = "text-white", subTitle = null }) {
+  const keys = Object.keys(stats || {});
   if (keys.length === 0) return null;
 
   return (
@@ -24,7 +25,7 @@ function StatBlock({ title, stats, color = "text-white", subTitle = null }) {
 
 function groupStatsByAura(runes) {
   const grouped = {};
-  for (const rune of runes) {
+  for (const rune of runes || []) {
     if (!rune.aura || !rune.auraChance) continue;
 
     const auraKey = rune.aura;
@@ -46,7 +47,13 @@ function groupStatsByAura(runes) {
   return grouped;
 }
 
-export default function StatsSummary({ totalStats, runeStats, auraStats, classStats, runes = [] }) {
+export default function StatsSummary({
+  totalStats = {},
+  runeStats = {},
+  auraStats = {},
+  classStats = {},
+  runes = [],
+}) {
   const groupedAuraStats = groupStatsByAura(runes);
 
   return (

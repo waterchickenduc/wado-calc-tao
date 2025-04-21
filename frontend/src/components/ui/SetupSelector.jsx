@@ -1,84 +1,53 @@
-// frontend/components/ui/SetupSelector.jsx
-import React, { useState } from "react";
+import React from "react";
 
 export default function SetupSelector({
-  setups = [],
-  activeIndex = 0,
-  onSelect = () => {},
-  onNew = () => {},
-  onRename = () => {},
-  onDelete = () => {},
+  setups,
+  activeIndex,
+  onSelect,
+  onNew,
+  onRename,
+  onDelete,
 }) {
-  const [editingIndex, setEditingIndex] = useState(null);
-  const [tempName, setTempName] = useState("");
-
-  const startEditing = (index, currentName) => {
-    setEditingIndex(index);
-    setTempName(currentName);
-  };
-
-  const confirmRename = (index) => {
-    if (tempName.trim() !== "") {
-      onRename(index, tempName.trim());
+  const handleDoubleClick = (index) => {
+    const newName = prompt("Rename setup:", setups[index].name);
+    if (newName && newName.trim()) {
+      onRename(index, newName.trim());
     }
-    setEditingIndex(null);
   };
 
   return (
-    <div className="flex items-center flex-wrap gap-2">
-      {setups.map((setup, i) => {
-        const isActive = i === activeIndex;
-        const isEditing = i === editingIndex;
-
-        return (
-          <div
-            key={setup.id}
-            className={`flex items-center text-sm rounded px-3 py-1 cursor-pointer transition-all ${
-              isActive
-                ? "bg-blue-600 text-white"
-                : "bg-zinc-800 text-white hover:bg-zinc-700"
-            }`}
+    <div className="flex flex-wrap items-center gap-2">
+      {/* Setup Tabs */}
+      {setups.map((setup, index) => (
+        <button
+          key={setup.id}
+          onClick={() => onSelect(index)}
+          onDoubleClick={() => handleDoubleClick(index)}
+          className={`px-4 py-2 rounded flex items-center gap-2 ${
+            index === activeIndex
+              ? "bg-blue-600 text-white"
+              : "bg-zinc-800 text-gray-300 hover:bg-zinc-700 hover:text-white"
+          }`}
+        >
+          <span>{setup.name}</span>
+          <span
+            onClick={(e) => {
+              e.stopPropagation();
+              onDelete(index);
+            }}
+            className="text-red-400 hover:text-red-300 ml-1 cursor-pointer"
           >
-            {isEditing ? (
-              <input
-                type="text"
-                value={tempName}
-                autoFocus
-                onChange={(e) => setTempName(e.target.value)}
-                onBlur={() => confirmRename(i)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") confirmRename(i);
-                  if (e.key === "Escape") setEditingIndex(null);
-                }}
-                className="bg-transparent text-white border-none outline-none w-24"
-              />
-            ) : (
-              <button
-                onClick={() => onSelect(i)}
-                onDoubleClick={() => startEditing(i, setup.name)}
-                className="mr-1"
-                title="Double-click to rename"
-              >
-                {setup.name || `Setup ${i + 1}`}
-              </button>
-            )}
+            ✖
+          </span>
+        </button>
+      ))}
 
-            <button
-              onClick={() => onDelete(i)}
-              title="Delete setup"
-              className="text-white hover:text-red-300 ml-1 text-sm"
-            >
-              ×
-            </button>
-          </div>
-        );
-      })}
-
+      {/* ＋ New Setup */}
       <button
         onClick={onNew}
-        className="px-4 py-1 text-sm rounded border border-dashed border-zinc-600 text-white hover:border-blue-400"
+        className="px-4 py-2 rounded border border-dashed border-purple-500 text-purple-300 hover:bg-purple-600 hover:text-white transition-all text-sm"
       >
-        ➕ New Setup
+        ＋ New Setup
       </button>
     </div>
   );
