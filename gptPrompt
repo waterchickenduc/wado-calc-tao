@@ -5,7 +5,7 @@ Systeminfo:
 - Vite version: unknown
 
 Directory tree:
-/root/test/wado-calc-tao
+.
 ├── converter
 │   └── raw
 └── frontend
@@ -108,201 +108,37 @@ Directory tree including files:
 /root/test/wado-calc-tao/run-converter.sh
 /root/test/wado-calc-tao/run-GPTprompt.sh
 /root/test/wado-calc-tao/run-me.sh
-/root/test/wado-calc-tao/toGPT-ToDo
 /root/test/wado-calc-tao/gptPrompt
+/root/test/wado-calc-tao/ideas.md
 
-Responsive sidebar / top nav layout wrapper?
-Export a setup as a link?
-add custom spacing, shadows, or dark mode enhancements
-add ssl, change ports
+Hey! I’m continuing work on my **WadoCalc Tao** project — a Node.js + React + Tailwind MMORPG calculator.
 
-Would you like to show total stat preview from class as well?
-Would you like the selected class to also affect the StatTable?
-Or maybe combine class stats and rune stats in the right panel? 💡
-Let me know how deep you'd like the integration to go.
-
-UI tweaks
-class validation
-aura view
-pot !
-mercs !
-
-💡 Preview aura info
-🌍 Export builds as URL
-🎯 Filter by rune tags like “Othala”
-Let me know if you'd like to add aura handling, class stat merging into totals, or export features 📦.
-Show total stats?
-Add tooltips or categories?
-f you're ready, I can now help you:
-Add a search bar to filter runes by name or stat
-Add a remove rune button
-Calculate total stats from selected runes
-Add rune categories or tags
- Rune filter/search	Search bar to find by name/stat
-🧮 Total stat summary	Auto calculate total stats from runes
-🧠 Stat matrix compare	Side-by-side setup comparison with % deltas
-💾 Export/import builds	Save setups to JSON, re-import them
-🎯 Stat breakdown UI	Show tooltips or tags for each stat group
-🧬 Cloning a Setup
-📊 Stat visual matrix
-🧼 Stat cleanup or grouping
-
-Let me know if you want to:
-
-✅ Make the card compact in mobile?
-
-🔍 Add keyword highlights?
-
-🟣 Show aura summary as a badge?
-Add tooltips (title="Click to clear everything" etc)
-
-Animate ＋ New Setup on hover
-
-Add Undo support for 🧹 Empty Setup
-
-remove the save and load button instead share
-
-
-
-Hey! I’m continuing work on my **WadoCalc Tao** project — a Node.js + React + Tailwind MMORPG calculator. We've already built:
-
+We've already built:
 - Multi-setup build system
 - Class and rune selectors for figure out the best build (theory crafting)
 - Stat summaries (with class + rune + aura support)
-- Filters using logical expressions like `(Cr. Dmg AND HP) OR Skill CD` 
-Search rune names, rune stones, auras or stats
-Use AND, OR, NOT to combine
-Use brackets for grouping: (HP OR Cr. Dmg) AND Jara
-Use comparisons: Cr. Rate > 5, HP <= 10
-Case-insensitive, autocomplete with arrow keys + Enter
-^doenst work
+- Filters using logical expressions like `(Cr. Dmg AND HP) OR Skill CD`
+- Search rune names, rune stones, auras or stats
 - Fuse.js fuzzy autocomplete for stats, runestones, rune names, auras
-- Drag-and-drop filter builder
-- Stats Summary sidebar
+- Stats Summary sidebar including
 - Complete Tailwind dark mode UI
 
+Project-Info:
+- Current Git Repo: https://github.com/waterchickenduc/wado-calc-tao.git
+- Current Branch: testing1
+
 Book of honor:
-- always send the full code with the full path, always patch the new stuff into the current code, if you dont have it, ask for it
-- no need for explanation while troubleshoot
-- always keep the functions already build in, even when we remove stuff for tshoot, we want add them back later again
-
-git: https://github.com/waterchickenduc/wado-calc-tao.git
-System: 
-- vps with Almalinux 9
-- VITE v4.5.13
-- [root@d3mon:~] # node -v
-v22.14.0
-- [root@d3mon:~] # npm -v
-10.9.2
+- Always send the full code with the full path, always patch the new stuff into the current code. If you don't have it, ask for it.
+- No need for explanation.
+- Always keep the functions already built in, even when we remove stuff for troubleshooting — we want to add them back later again.
 
 
-tree -d -I "node_modules" --prune
-.
-├── converter
-│   └── raw
-└── frontend
-    ├── public
-    │   └── assets
-    │       └── icons
-    └── src
-        ├── assets
-        ├── components
-        │   ├── __tests__
-        │   │   └── __snapshots__
-        │   └── ui
-        ├── data
-        ├── hooks
-        └── lib
-            └── filterEngine
-                └── __tests__
-
-
-
-[root@d3mon:/data/git/wado-calc-tao] testing_v1# find . -type f | grep -v "node_modules" | grep -v ".git"
-./frontend/README.md
-./frontend/README.md
-./frontend/eslint.config.js
-./frontend/index.html
-./frontend/public/vite.svg
-./frontend/src/App.css
-./frontend/src/assets/react.svg
-./frontend/src/index.css
-./frontend/src/main.jsx
-./frontend/src/components/RuneSearch.jsx
-./frontend/src/components/ClassSelector.jsx
-./frontend/src/components/RuneSelector.jsx
-./frontend/src/components/CompareView.jsx
-./frontend/src/components/ui/Card.jsx
-./frontend/src/components/ui/Tabs.jsx
-./frontend/src/components/ui/Button.jsx
-./frontend/src/components/ui/Input.jsx
-./frontend/src/components/ui/Dropdown.jsx
-./frontend/src/components/ui/Tooltip.jsx
-./frontend/src/components/ui/StatTable.jsx
-./frontend/src/components/ui/SetupSelector.jsx
-./frontend/src/components/ui/SelectedItemCard.jsx
-./frontend/src/components/ui/BuilderLayout.jsx
-./frontend/src/components/SelectedRunes.jsx
-./frontend/src/components/StatTable.jsx
-./frontend/src/components/SelectedRuneCard.jsx
-./frontend/src/components/ClassCard.jsx
-./frontend/src/components/StatFilterBuilder.jsx
-./frontend/src/components/FilterBuilder.jsx
-./frontend/src/components/SortableItem.jsx
-./frontend/src/components/FilterBar.jsx
-./frontend/src/components/BasicFilterBar.jsx
-./frontend/src/components/RuneCard.jsx
-./frontend/src/components/InfoPopover.jsx
-./frontend/src/components/SetupBuilder.jsx
-./frontend/src/components/StatsSummary.jsx
-./frontend/src/components/__tests__/StatsSummary.test.jsx
-./frontend/src/components/__tests__/__snapshots__/StatsSummary.test.jsx.snap
-./frontend/src/data/runes.json
-./frontend/src/data/runeStones.json
-./frontend/src/data/auraEffects.json
-./frontend/src/data/stats.json
-./frontend/src/data/buffs.json
-./frontend/src/data/adventureClasses.json
-./frontend/src/data/statMap.js
-./frontend/src/data/stat.json
-./frontend/src/data/buff.json
-./frontend/src/data/runeAuras.json
-./frontend/src/lib/utils.js
-./frontend/src/lib/statOrder.js
-./frontend/src/lib/statLabels.js
-./frontend/src/lib/filterEvaluator.js
-./frontend/src/lib/evaluateFilter.js
-./frontend/src/lib/evaluateExpression.js
-./frontend/src/lib/filterEngine/README.md
-./frontend/src/lib/filterEngine/__tests__/evaluateLogicalSearch.test.js
-./frontend/src/lib/filterEngine/evaluate.js
-./frontend/src/lib/filterEngine/index.js
-./frontend/src/lib/filterEngine/tokenize.js
-./frontend/src/lib/filterEngine/parser.js
-./frontend/src/lib/filterEngine/evaluateAst.js
-./frontend/src/lib/filterEngine/evaluateLogicalSearch.js
-./frontend/src/lib/filterEngine/evaluator.js
-./frontend/src/lib/statHelpers.js
-./frontend/src/hooks/useDraggableExpression.js
-./frontend/src/App.jsx
-./frontend/postcss.config.cjs
-./frontend/tailwind.config.js
-./frontend/package.json
-./frontend/vite.config.js
-./frontend/vitest.config.js
-./frontend/vitest.setup.js
-./frontend/package-lock.json
-./converter/raw/adventure_class.json
-./converter/raw/buff.json
-./converter/raw/rune_aura.json
-./converter/raw/rune_stone.json
-./converter/raw/stat.json
-./converter/raw/rune.json
-./converter/convert.mjs
-./.editorconfig
-./README.md
-./LICENSE
-./.npmrc
-./run-me.sh
-./run-converter.sh
-./todo.md
+Stuff to be done right now:
+  Prio 1:
+    Use OR, AND NOT to combine
+    Use brackets for grouping: (HP OR Cr. Dmg) AND Jara
+  Prio 2:
+  In the autofill menu it should be written like this
+  rune name [rune]
+  AND       [operator]
+  dream     [aura]
